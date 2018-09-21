@@ -265,7 +265,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 50e10ee40de45e747ab6fbd2ab3d0e57, type: 3}
+  m_Texture: {fileID: 2800000, guid: 014c18c4f6bd7e14eb27d3323f881c15, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -313,8 +313,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.94, y: 1.98}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 2.13, y: 3.19}
+  m_SizeDelta: {x: 180.253, y: 149}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!102 &414807165
 TextMesh:
@@ -326,18 +326,18 @@ TextMesh:
   m_GameObject: {fileID: 414807163}
   m_Text: Deuda
   m_OffsetZ: 0
-  m_CharacterSize: 23
+  m_CharacterSize: 3.5
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 40
+  m_FontSize: 500
   m_FontStyle: 0
   m_RichText: 0
-  m_Font: {fileID: 12800000, guid: 5ea4c96fe25f5a3478145442286bf5ca, type: 3}
+  m_Font: {fileID: 12800000, guid: 966c8dd2fabc952479588a2ac6ff59a6, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278982641
+    rgba: 4281204991
 --- !u!23 &414807166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -354,7 +354,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5ea4c96fe25f5a3478145442286bf5ca, type: 3}
+  - {fileID: 2100000, guid: 966c8dd2fabc952479588a2ac6ff59a6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -563,6 +563,17 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 23227664004346562, guid: 2fc6e54999c281e42abffaa98518bf02,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ea4c96fe25f5a3478145442286bf5ca, type: 3}
+    - target: {fileID: 102984358515901608, guid: 2fc6e54999c281e42abffaa98518bf02,
+        type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5ea4c96fe25f5a3478145442286bf5ca,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc6e54999c281e42abffaa98518bf02, type: 2}
   m_IsPrefabAsset: 0
@@ -841,7 +852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.01, y: 1.98}
+  m_AnchoredPosition: {x: -2.84, y: 3.01}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!102 &1504653120
@@ -859,10 +870,10 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 300
+  m_FontSize: 450
   m_FontStyle: 0
   m_RichText: 0
-  m_Font: {fileID: 12800000, guid: 5ea4c96fe25f5a3478145442286bf5ca, type: 3}
+  m_Font: {fileID: 12800000, guid: 966c8dd2fabc952479588a2ac6ff59a6, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4293381926
@@ -882,7 +893,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 5ea4c96fe25f5a3478145442286bf5ca, type: 3}
+  - {fileID: 2100000, guid: 966c8dd2fabc952479588a2ac6ff59a6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1017,6 +1028,17 @@ Prefab:
       propertyPath: m_Name
       value: SalirText
       objectReference: {fileID: 0}
+    - target: {fileID: 23227664004346562, guid: 2fc6e54999c281e42abffaa98518bf02,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5ea4c96fe25f5a3478145442286bf5ca, type: 3}
+    - target: {fileID: 102984358515901608, guid: 2fc6e54999c281e42abffaa98518bf02,
+        type: 2}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5ea4c96fe25f5a3478145442286bf5ca,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc6e54999c281e42abffaa98518bf02, type: 2}
   m_IsPrefabAsset: 0
