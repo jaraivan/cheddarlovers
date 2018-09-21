@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class CamaraSeguirCtrl : MonoBehaviour {
 
+	public float tiempoDeSuavizado = 0.5f;
 	public GameObject jugador;
 	private Rigidbody2D rb2dJugador;
 	Transform target;
 	float tLX,tLY,bRX,bRY;
+	Vector2 velocidad;
 	// Use this for initialization
 	void Start () {
 		rb2dJugador = jugador.GetComponent<Rigidbody2D>();
@@ -19,10 +21,27 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
+
+		float posX = Mathf.Round(
+			Mathf.SmoothDamp(transform.position.x,
+			rb2dJugador.position.x,ref velocidad.x,
+			tiempoDeSuavizado
+			) * 100
+			) /100;
+
+		float posY = Mathf.Round(
+		Mathf.SmoothDamp(transform.position.y,
+		rb2dJugador.position.y,ref velocidad.y,
+		tiempoDeSuavizado
+		) * 100
+		) /100;
+		
+
+
 		Vector3 posicionJugador = rb2dJugador.position;
 		transform.position = new Vector3(
-			Mathf.Clamp(posicionJugador.x,tLX,bRX),
-			Mathf.Clamp(posicionJugador.y,bRY,tLY),
+			Mathf.Clamp(posX,tLX,bRX),
+			Mathf.Clamp(posY,bRY,tLY),
 			transform.position.z);
 	}
 
