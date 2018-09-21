@@ -162,7 +162,7 @@ Transform:
   m_Children:
   - {fileID: 1861732402}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &596378644
 MonoBehaviour:
@@ -176,6 +176,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!1001 &827305239
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.9191475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.9031353
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1133852684
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +358,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 43151a5f7a17db04eb312c11dd70383d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
