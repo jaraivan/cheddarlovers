@@ -160,7 +160,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 596378641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.05, y: -2.14, z: 0}
+  m_LocalPosition: {x: 8.3, y: -9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18721c9798f8c244b9d0f9cf22c0751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapaInicial: {fileID: 1265226169}
   speed: 3
 --- !u!61 &596378645
 BoxCollider2D:
@@ -276,11 +277,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.9191475
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4.9031353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4804842251929338, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -381,7 +382,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1133852684}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 9.69, y: -8.14, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -399,3 +400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jugador: {fileID: 596378641}
+--- !u!1 &1265226169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1078910632809492, guid: 3e20de81d0d7bd04b901203cbab810a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 827305239}
