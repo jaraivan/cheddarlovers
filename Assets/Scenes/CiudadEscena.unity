@@ -307,6 +307,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 61250150857434008, guid: 3e20de81d0d7bd04b901203cbab810a8,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 3.910153
+      objectReference: {fileID: 0}
+    - target: {fileID: 61250150857434008, guid: 3e20de81d0d7bd04b901203cbab810a8,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 7.820306
+      objectReference: {fileID: 0}
+    - target: {fileID: 61296252495652118, guid: 3e20de81d0d7bd04b901203cbab810a8,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 3.2844965
+      objectReference: {fileID: 0}
+    - target: {fileID: 61296252495652118, guid: 3e20de81d0d7bd04b901203cbab810a8,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 5.639319
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e20de81d0d7bd04b901203cbab810a8, type: 2}
   m_IsPrefabAsset: 0
@@ -399,6 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2906f8bac63c4c408dc3a323f44cd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempoDeSuavizado: 0.5
   jugador: {fileID: 596378641}
 --- !u!1 &1265226169 stripped
 GameObject:
