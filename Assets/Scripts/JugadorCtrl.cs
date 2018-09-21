@@ -6,37 +6,35 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public float speed = 3f;
 	private Rigidbody2D rb2d;
+	private Animator anim;
+	private Vector2 mov;
 
 	// Use this for initialization
 	void Start () {
-		
+		anim = GetComponent<Animator>();
+		rb2d = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		mov = new Vector2(
+			Input.GetAxisRaw("Horizontal"),
+			Input.GetAxisRaw("Vertical")
+		);
+		if(mov != Vector2.zero){
+		anim.SetFloat("movX",mov.x);
+		anim.SetFloat("movY",mov.y);
+		anim.SetBool("caminando",true);
+		}else{
+			anim.SetBool("caminando",false);
+		}
 	}
 
 	void FixedUpdate(){
-		if(SeEstaPresionando(KeyCode.RightArrow)){
-			MoverA(Vector2.right);
-		}
-		if(SeEstaPresionando(KeyCode.LeftArrow)){
-			MoverA(Vector2.left);
-		}
-		if(SeEstaPresionando(KeyCode.DownArrow)){
-			MoverA(Vector2.down);
-		}
-		if(SeEstaPresionando(KeyCode.UpArrow)){
-			MoverA(Vector2.up);
-		}
+		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
+		
 
 	}
 
-	void MoverA(Vector2 direccion){
-		transform.Translate(direccion * speed * Time.deltaTime);
-	}
-	bool SeEstaPresionando(KeyCode tecla){
-		return Input.GetKey(tecla);
-	}
+	
 }
