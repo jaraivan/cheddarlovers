@@ -521,17 +521,17 @@ Prefab:
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -3.12
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
@@ -718,17 +718,17 @@ Prefab:
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -3.12
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
@@ -962,12 +962,12 @@ Prefab:
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224899213579158096, guid: 2fc6e54999c281e42abffaa98518bf02,
         type: 2}
