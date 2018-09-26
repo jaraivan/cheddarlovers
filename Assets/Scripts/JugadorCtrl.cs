@@ -11,6 +11,8 @@ public class JugadorCtrl : MonoBehaviour {
 	private Animator anim;
 	private Vector2 mov;
 
+	public bool quiereHablar = false;
+
 	void Awake(){
 		Assert.IsNotNull(mapaInicial);
 	}
@@ -35,11 +37,18 @@ public class JugadorCtrl : MonoBehaviour {
 		}else{
 			anim.SetBool("caminando",false);
 		}
+
+		
+
 	}
 
 	void FixedUpdate(){
 		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
-		
+		if(Input.GetKey(KeyCode.Space)){
+			quiereHablar = true;
+		}else{
+			quiereHablar = false;
+		}
 
 	}
 
