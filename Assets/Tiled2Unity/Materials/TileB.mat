@@ -25,5 +25,5 @@ Material:
     m_Floats:
     - PixelSnap: 0
     m_Colors:
-    - _AlphaColorKey: {r: 1, g: 1, b: 1, a: 1}
+    - _AlphaColorKey: {r: 0.9882353, g: 0.9882353, b: 0.9882353, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
