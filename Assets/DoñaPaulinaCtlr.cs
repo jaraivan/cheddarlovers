@@ -5,6 +5,7 @@ using UnityEngine;
 public class DoñaPaulinaCtlr : MonoBehaviour {
 
 	public GameObject lucas;
+	public GameObject conversacion;
 	private BoxCollider2D bc2d;
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,8 @@ public class DoñaPaulinaCtlr : MonoBehaviour {
 		if(col.gameObject.tag == "Player"){
 			if(Input.GetKeyDown(KeyCode.Space)){
 				print("Hola Lucas, soy Doña Paulina");
+				ActivarConversacion();
+				conversacion.GetComponentInChildren<TextMesh>().text = "Hola Lucas, soy Doña Paulina";
 			}
 		}
 	}
@@ -29,8 +32,12 @@ public class DoñaPaulinaCtlr : MonoBehaviour {
 		if(col.gameObject.tag == "Player"){
 			if(Input.GetKeyDown(KeyCode.Space)){
 				print("Hola Lucas, soy Doña Paulina");
+				ActivarConversacion();
+				conversacion.GetComponentInChildren<TextMesh>().text = "Hola Lucas, soy Doña Paulina";
 			}
 		}
 	}
-
+	void ActivarConversacion(){
+		conversacion.SetActive(true);
+	}
 }

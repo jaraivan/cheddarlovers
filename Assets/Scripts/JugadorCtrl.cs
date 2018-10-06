@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
+public enum EstadoDelJugador{Conversando,Jugando};
+
 public class JugadorCtrl : MonoBehaviour {
 
 	public GameObject mapaInicial;
@@ -12,6 +14,7 @@ public class JugadorCtrl : MonoBehaviour {
 	private Vector2 mov;
 
 	public bool quiereHablar = false;
+	private EstadoDelJugador estadoDelJugador = EstadoDelJugador.Jugando;
 
 	void Awake(){
 		Assert.IsNotNull(mapaInicial);
@@ -22,6 +25,7 @@ public class JugadorCtrl : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
 		Camera.main.GetComponent<CamaraSeguirCtrl>().SetLimites(mapaInicial);
+		estadoDelJugador = EstadoDelJugador.Jugando;
 	}
 	
 	// Update is called once per frame
@@ -44,11 +48,7 @@ public class JugadorCtrl : MonoBehaviour {
 
 	void FixedUpdate(){
 		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
-		if(Input.GetKey(KeyCode.Space)){
-			quiereHablar = true;
-		}else{
-			quiereHablar = false;
-		}
+
 
 	}
 
