@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e0d488aea3339cd4bade203edfe1bf68
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 100
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: JMH Arkham
+  fontNames:
+  - JMH Arkham
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a9d924b937d781547ae0f2b380700c63, type: 3}
+  customCharacters: 
+  fontRenderingMode: 1
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

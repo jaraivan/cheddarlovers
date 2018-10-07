@@ -171,7 +171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &237994968
 RectTransform:
   m_ObjectHideFlags: 0
@@ -271,7 +271,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 596378641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.3, y: -9, z: 0}
+  m_LocalPosition: {x: 19.64, y: -8.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.20527817, g: 0.032707367, b: 0.46226418, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -436,8 +436,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5ea4c96fe25f5a3478145442286bf5ca, type: 3}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: e0d488aea3339cd4bade203edfe1bf68, type: 3}
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -448,8 +448,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Hola, como va? MAGO PUTO, hace bien las cosas, no seas un vago de mierda
-    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+  m_Text: 
 --- !u!222 &739307685
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -505,7 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lucas: {fileID: 596378641}
-  conversacion: {fileID: 0}
+  conversacion: {fileID: 237994967}
 --- !u!212 &794353435
 SpriteRenderer:
   m_ObjectHideFlags: 0

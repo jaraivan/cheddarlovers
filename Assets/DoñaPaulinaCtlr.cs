@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DoñaPaulinaCtlr : MonoBehaviour {
 
@@ -23,7 +24,7 @@ public class DoñaPaulinaCtlr : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.Space)){
 				print("Hola Lucas, soy Doña Paulina");
 				ActivarConversacion();
-				conversacion.GetComponentInChildren<TextMesh>().text = "Hola Lucas, soy Doña Paulina";
+				conversacion.GetComponentInChildren<Text>().text = "Hola Lucas, soy Doña Paulina";
 			}
 		}
 	}
@@ -33,7 +34,7 @@ public class DoñaPaulinaCtlr : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.Space)){
 				print("Hola Lucas, soy Doña Paulina");
 				ActivarConversacion();
-				conversacion.GetComponentInChildren<TextMesh>().text = "Hola Lucas, soy Doña Paulina";
+				conversacion.GetComponentInChildren<Text>().text = "Hola Lucas, soy Doña Paulina";
 			}
 		}
 	}
