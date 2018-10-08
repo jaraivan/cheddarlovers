@@ -1,23 +1,19 @@
 fileFormatVersion: 2
-guid: 43151a5f7a17db04eb312c11dd70383d
+guid: 2ae8f3a1336422f4f9d10fa20165c56f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: lucas_0
-    21300002: lucas_1
-    21300004: lucas_2
-    21300006: lucas_3
-    21300008: lucas_4
-    21300010: lucas_5
-    21300012: lucas_6
-    21300014: lucas_7
-    21300016: lucas_8
-    21300018: lucas_9
-    21300020: lucas_10
-    21300022: lucas_11
-    21300024: lucas_12
-    21300026: lucas_13
-    21300028: lucas_14
-    21300030: lucas_15
+    21300000: $151-Animal01_0
+    21300002: $151-Animal01_1
+    21300004: $151-Animal01_2
+    21300006: $151-Animal01_3
+    21300008: $151-Animal01_4
+    21300010: $151-Animal01_5
+    21300012: $151-Animal01_6
+    21300014: $151-Animal01_7
+    21300016: $151-Animal01_8
+    21300018: $151-Animal01_9
+    21300020: $151-Animal01_10
+    21300022: $151-Animal01_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -47,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -61,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -90,7 +86,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lucas_0
+      name: $151-Animal01_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 146
-        width: 23
-        height: 43
+        x: 13
+        y: 120
+        width: 16
+        height: 36
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,19 +110,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3feb85bb885f2364b89c829ea14a0e5e
+      spriteID: 59982b5c20e108846a615b2b982aaf24
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_1
+      name: $151-Animal01_1
       rect:
         serializedVersion: 2
-        x: 37
-        y: 146
-        width: 23
-        height: 43
+        x: 54
+        y: 122
+        width: 15
+        height: 35
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,19 +130,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 190f94d3534d57f448666053d660c090
+      spriteID: dc107b7c447e636449c1472e42525147
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_2
+      name: $151-Animal01_2
       rect:
         serializedVersion: 2
-        x: 69
-        y: 146
-        width: 23
-        height: 43
+        x: 94
+        y: 120
+        width: 16
+        height: 36
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,19 +150,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3bdca84272121f47ac5ec31e7289c9a
+      spriteID: c55f1d5b3a6147d44b3a0c7c6e4124e9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_3
+      name: $151-Animal01_3
       rect:
         serializedVersion: 2
-        x: 101
-        y: 146
-        width: 23
-        height: 43
+        x: 3
+        y: 82
+        width: 38
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,19 +170,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca8201656e0d0a64894fbb4b8354b1e5
+      spriteID: 1d0b4cd2a8129cc4b850c50c2a71cf86
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_4
+      name: $151-Animal01_4
       rect:
         serializedVersion: 2
-        x: 5
-        y: 98
-        width: 23
-        height: 43
+        x: 43
+        y: 82
+        width: 37
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,19 +190,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b5a245a0a7e36b4dbfe45ecedcbd2e7
+      spriteID: b7bc34689a29ad644abe4689557de79c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_5
+      name: $151-Animal01_5
       rect:
         serializedVersion: 2
-        x: 37
-        y: 98
-        width: 23
-        height: 43
+        x: 83
+        y: 83
+        width: 37
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,19 +210,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec4d7a418963e744e98f8fd4b13936d9
+      spriteID: 62174e209a9486f418aff1373299040e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_6
+      name: $151-Animal01_6
       rect:
         serializedVersion: 2
-        x: 69
-        y: 98
-        width: 23
-        height: 43
+        x: 1
+        y: 42
+        width: 38
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,19 +230,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f63a728aa8442a045939154108fa78a9
+      spriteID: f41adcb6b3d1b7548b89304d6a7a0136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_7
+      name: $151-Animal01_7
       rect:
         serializedVersion: 2
-        x: 101
-        y: 98
-        width: 23
-        height: 43
+        x: 42
+        y: 42
+        width: 37
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64ff083ba9559564c9e8c2267bdb314c
+      spriteID: 88bbeda7d2e625b4f80153c575be67aa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_8
+      name: $151-Animal01_8
       rect:
         serializedVersion: 2
-        x: 5
-        y: 50
-        width: 23
-        height: 43
+        x: 82
+        y: 43
+        width: 37
+        height: 25
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,19 +270,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa45a72e76d1a614690f7b842adeb095
+      spriteID: 3cdc7d63066aa7b4e87f55bdbfbe43f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_9
+      name: $151-Animal01_9
       rect:
         serializedVersion: 2
-        x: 37
-        y: 50
-        width: 23
-        height: 43
+        x: 13
+        y: 1
+        width: 17
+        height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,59 +290,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cd2ac2cd8abaa543ad81a0e0d880354
+      spriteID: f67c4659125c51242bb809bcf0973c2f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_10
+      name: $151-Animal01_10
       rect:
         serializedVersion: 2
-        x: 69
-        y: 50
-        width: 23
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d1014db5ec32c04c97dcb4b6d0cdfcd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lucas_11
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 50
-        width: 23
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e272bc848cccd1459960196333a0d6d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lucas_12
-      rect:
-        serializedVersion: 2
-        x: 5
+        x: 53
         y: 2
-        width: 23
-        height: 43
+        width: 17
+        height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,19 +310,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4839de99b49fda4d8d02f4cb0ea2ebb
+      spriteID: 506ca2e93a1ed5b46983a3303fd37520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lucas_13
+      name: $151-Animal01_11
       rect:
         serializedVersion: 2
-        x: 37
-        y: 2
-        width: 23
-        height: 43
+        x: 93
+        y: 1
+        width: 17
+        height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,47 +330,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8423619cf5ba8b4883530c1eb9d7c8d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lucas_14
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 2
-        width: 23
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a7ad4d5e0038c340828c28b2670d481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lucas_15
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 2
-        width: 23
-        height: 43
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a6407a5b17817046b9020436ed4251b
+      spriteID: 755fbe4fc8b759d42b408f3ec2cffc40
       vertices: []
       indices: 
       edges: []
@@ -422,7 +338,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ed99b84f7d03c334988f21d74eec2daa
+    spriteID: 7c01c49744302e644ac9b8caa40b8619
     vertices: []
     indices: 
     edges: []
