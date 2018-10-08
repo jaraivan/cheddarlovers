@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 38e1ff7a760275048b3119405a8ccaca
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 5
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Follow The Light DEMO
+  fontNames:
+  - Follow The Light DEMO
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 966c8dd2fabc952479588a2ac6ff59a6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 1
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
