@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ConversacionCtrl : MonoBehaviour {
 
-	public float distanciaY = 3.5f;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,7 +11,6 @@ public class ConversacionCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float posY = transform.position.y-distanciaY;
-		transform.position = new Vector3(transform.position.x,posY,transform.position.z);
+		
 	}
 }
