@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DoñaPaulinaCtlr : MonoBehaviour {
+public class DoniaPaulinaCtlr : MonoBehaviour {
 
 	public GameObject lucas;
 	public GameObject conversacion;
