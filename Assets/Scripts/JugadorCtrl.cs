@@ -52,5 +52,16 @@ public class JugadorCtrl : MonoBehaviour {
 
 	}
 
+	public void IniciarConversacion(){
+		this.estadoDelJugador = EstadoDelJugador.Conversando;
+	}
+	public void IniciarJugando(){
+		this.estadoDelJugador = EstadoDelJugador.Jugando;
+	}
+
+	public EstadoDelJugador GetEstadoDelJugador(){
+		return this.estadoDelJugador;
+	}
+
 	
 }
