@@ -11,8 +11,13 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 	float tLX,tLY,bRX,bRY;
 	Vector2 velocidad;
 	// Use this for initialization
+
+	void Awake(){
+		
+	}
 	void Start () {
-		rb2dJugador = jugador.GetComponent<Rigidbody2D>();
+		//rb2dJugador = 
+		
 	}
 	
 	// Update is called once per frame
@@ -21,24 +26,25 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
+		JugadorCtrl jugador = FindObjectOfType<JugadorCtrl>();
 
 		float posX = Mathf.Round(
 			Mathf.SmoothDamp(transform.position.x,
-			rb2dJugador.position.x,ref velocidad.x,
+			jugador.GetComponent<Rigidbody2D>().position.x,ref velocidad.x,
 			tiempoDeSuavizado
 			) * 100
 			) /100;
 
 		float posY = Mathf.Round(
 		Mathf.SmoothDamp(transform.position.y,
-		rb2dJugador.position.y,ref velocidad.y,
+		jugador.GetComponent<Rigidbody2D>().position.y,ref velocidad.y,
 		tiempoDeSuavizado
 		) * 100
 		) /100;
 		
 
 
-		Vector3 posicionJugador = rb2dJugador.position;
+		Vector3 posicionJugador = jugador.GetComponent<Rigidbody2D>().position;
 		transform.position = new Vector3(
 			Mathf.Clamp(posX,tLX,bRX),
 			Mathf.Clamp(posY,bRY,tLY),

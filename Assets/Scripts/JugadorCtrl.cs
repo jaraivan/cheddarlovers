@@ -16,8 +16,16 @@ public class JugadorCtrl : MonoBehaviour {
 	public bool quiereHablar = false;
 	private EstadoDelJugador estadoDelJugador = EstadoDelJugador.Jugando;
 
+	public static JugadorCtrl jugador;
+
 	void Awake(){
 		Assert.IsNotNull(mapaInicial);
+		if(jugador == null) {
+			jugador = this;
+		    DontDestroyOnLoad(gameObject);
+		} else if (jugador != this) {
+			Destroy(gameObject);
+		}
 	}
 
 	// Use this for initialization

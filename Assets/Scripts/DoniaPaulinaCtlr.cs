@@ -62,7 +62,8 @@ public class DoniaPaulinaCtlr : MonoBehaviour {
 	}
 
 	void DesactivarConversacion(){
-		lucas.GetComponent<JugadorCtrl>().IniciarJugando();
+		JugadorCtrl lucas = FindObjectOfType<JugadorCtrl>();
+		lucas.IniciarJugando();
 		indiceDialogo = 0;
 		conversacion.SetActive(false);
 	}
