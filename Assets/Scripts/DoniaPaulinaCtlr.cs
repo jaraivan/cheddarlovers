@@ -46,6 +46,7 @@ public class DoniaPaulinaCtlr : MonoBehaviour {
 				col.gameObject.GetComponent<JugadorCtrl>().IniciarConversacion();
 				ActivarConversacion();
 				Mision primeraMision = (Mision) misiones.GetValue(0) ;
+				col.gameObject.GetComponent<JugadorCtrl>().AgregarMision(primeraMision);
 				conversacion.GetComponentInChildren<Text>().text = primeraMision.GetDialogo().GetLineasDeTexto()[indiceDialogo];
 			}
 		}
