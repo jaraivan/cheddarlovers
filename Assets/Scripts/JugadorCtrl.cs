@@ -18,6 +18,9 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public static JugadorCtrl jugador;
 
+	private Mision[] misionesAgregadas;
+	private int cantidadDeMisionesAgregadas = 0;
+
 	void Awake(){
 		Assert.IsNotNull(mapaInicial);
 		if(jugador == null) {
@@ -34,6 +37,8 @@ public class JugadorCtrl : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D>();
 		Camera.main.GetComponent<CamaraSeguirCtrl>().SetLimites(mapaInicial);
 		estadoDelJugador = EstadoDelJugador.Jugando;
+		misionesAgregadas = new Mision[5];
+		print(misionesAgregadas.Length);
 	}
 	
 	// Update is called once per frame
@@ -69,6 +74,15 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public EstadoDelJugador GetEstadoDelJugador(){
 		return this.estadoDelJugador;
+	}
+
+	public void AgregarMision(Mision mision){
+		misionesAgregadas[cantidadDeMisionesAgregadas] = mision;
+		cantidadDeMisionesAgregadas++;
+	}
+
+	public Mision[] GetMisionesDelJugador(){
+		return this.misionesAgregadas;
 	}
 
 	

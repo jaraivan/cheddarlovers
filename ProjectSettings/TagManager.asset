@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Mision0UI
+  - Mision1UI
+  - Mision2UI
+  - Mision3UI
+  - Mision4UI
   layers:
   - Default
   - TransparentFX
