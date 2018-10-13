@@ -8,7 +8,7 @@ public class ListaMisionesCtrl : MonoBehaviour {
 	private Mision[] misionesDelJugador;
 	private bool estaActivo = false;
 	void Start () {
-		misionesDelJugador = GameObject.FindWithTag("Player").GetComponent<JugadorCtrl>().GetMisionesDelJugador();
+		//misionesDelJugador = GameObject.FindWithTag("Player").GetComponent<JugadorCtrl>().GetMisionesDelJugador();
 		OcultarListaDeMisiones();
 
 		OcultarTodasLasMisiones();
@@ -37,10 +37,10 @@ public class ListaMisionesCtrl : MonoBehaviour {
 	}
 
 	void OcultarTodasLasMisiones(){
-		GameObject.FindWithTag("Mision0UI").SetActive(false);
-		GameObject.FindWithTag("Mision1UI").SetActive(false);
-		GameObject.FindWithTag("Mision2UI").SetActive(false);
-		GameObject.FindWithTag("Mision3UI").SetActive(false);
-		GameObject.FindWithTag("Mision4UI").SetActive(false);
+		//GameObject.FindWithTag("Mision0UI").SetActive(false);
+		//GameObject.FindWithTag("Mision1UI").SetActive(false);
+		//GameObject.FindWithTag("Mision2UI").SetActive(false);
+		//GameObject.FindWithTag("Mision3UI").SetActive(false);
+		//GameObject.FindWithTag("Mision4UI").SetActive(false);
 	}
 }
