@@ -7,7 +7,7 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 
 	public float tiempoDeSuavizado = 0.5f;
 	
-	public GameObject jugador;
+	private GameObject jugador;
 	Transform target;
 	float tLX,tLY,bRX,bRY;
 	Vector2 velocidad;
@@ -17,6 +17,7 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 		jugador = GameObject.FindWithTag("Player");
 		 Assert.IsNotNull(jugador);
 		
+		this.SetLimites(jugador.gameObject.GetComponent<JugadorCtrl>().GetMapa());
 		 
 		
 		
@@ -26,19 +27,19 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 		 transform.position = new Vector3(jugador.GetComponent<Transform>().position.x,
 			jugador.GetComponent<Transform>().position.y,
 			transform.position.z); 
-			print(jugador.GetComponent<Transform>().position.x);
-			print(jugador.GetComponent<Transform>().position.y);
+			
 			
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//print(jugador.GetComponent<Transform>().position.y);
 	}
 
 	void FixedUpdate(){
 		//GameObject jugador = GameObject.FindWithTag("Player");
+		
 
 		float posX = Mathf.Round(
 			Mathf.SmoothDamp(transform.position.x,
@@ -56,7 +57,7 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 		
 
 
-		Vector3 posicionJugador = jugador.GetComponent<Transform>().position;
+		//Vector3 posicionJugador = jugador.GetComponent<Transform>().position;
 		transform.position = new Vector3(
 			Mathf.Clamp(posX,tLX,bRX),
 			Mathf.Clamp(posY,bRY,tLY),
