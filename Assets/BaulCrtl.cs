@@ -12,11 +12,17 @@ public class BaulCrtl : MonoBehaviour {
 	private BoxCollider2D col;
 
 	private Animator anim;
+	private Animator mantenerAbierto;
+	private Animator cerrarBaul;
+	private Animator idle;
 
 	// Use this for initialization
 	void Start () {
 		col = GetComponent<BoxCollider2D>();
-
+		anim = GetComponent<Animator>();
+		mantenerAbierto = GetComponent<Animator>();
+		cerrarBaul = GetComponent<Animator>();
+        idle = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -24,14 +30,35 @@ public class BaulCrtl : MonoBehaviour {
 		
 	}
 
-	void OnTriggerStay2D(Collider2D col){
+	void OnTriggerEnter2D(Collider2D col){
 		if(col.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Space)) {
             AbrirBaul();
+			mantenerAbierto.SetBool("mantenerbaulAbierto", true);
+			
 		}
 }
     
-	void AbrirBaul() {
+void OnTriggerStay2D(Collider2D col){
+		if(col.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Space)) {
+            AbrirBaul();
+			mantenerAbierto.SetBool("mantenerbaulAbierto", true);
+			
+		}
 		
+}
+
+void OnTriggerExit2D(Collider2D col){
+        if(col.gameObject.tag == "Player") {
+             cerrarBaul.SetBool("cerrarBaul", true);
+			 mantenerAbierto.SetBool("mantenerbaulAbierto", false);
+			 anim.SetBool("apretaronParaAbrir", false);
+			 
+		}
+}
+
+	void AbrirBaul() {
+		anim.SetBool("apretaronParaAbrir", true);
+		cerrarBaul.SetBool("cerrarBaul", false);
 	}
 
 }
