@@ -10,6 +10,10 @@ TagManager:
   - Mision2UI
   - Mision3UI
   - Mision4UI
+  - UI
+  - ListaMisiones
+  - BotonMisiones
+  - VerticalLayoutMisiones
   layers:
   - Default
   - TransparentFX

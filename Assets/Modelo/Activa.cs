@@ -18,6 +18,11 @@ public class Activa : IEstadoDeMision{
         return false;
     }
 
+    public bool estaDisponible()
+    {
+        return false;
+    }
+
     public bool estaEntregada()
     {
         return false;

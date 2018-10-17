@@ -7,16 +7,19 @@ using UnityEngine;
 public class Mision {
 
     public string nombreDeMision;
+
+    public string propietario;
     public Dialogo dialogo;
     private Item recompensa = null;
 
     private IEstadoDeMision estadoDeMision;
 
     
-	public Mision(string nombreDeMisionQueMeDan, Dialogo dialogoQueMeDan ) {
+	public Mision(string nombreDeMisionQueMeDan, Dialogo dialogoQueMeDan ,string propietarioMision) {
         this.nombreDeMision = nombreDeMisionQueMeDan;
         this.dialogo = dialogoQueMeDan;
-        estadoDeMision = new Inactiva();
+        estadoDeMision = new Disponible();
+        this.propietario = propietarioMision;
 	}
 
     // Use this for initialization
@@ -47,6 +50,8 @@ public class Mision {
     public void SetEstado(IEstadoDeMision estado){
         this.estadoDeMision = estado;
     }
-	
+    public string GetPropietario(){
+        return this.propietario;
+    }
 
 }

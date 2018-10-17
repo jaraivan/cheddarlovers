@@ -8,4 +8,5 @@ public interface IEstadoDeMision
     bool estaActiva();
     bool estaCompletada();
     bool estaEntregada();
+    bool estaDisponible();
 } 

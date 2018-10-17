@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inactiva : IEstadoDeMision
+public class Disponible : IEstadoDeMision
 {
 
-    public Inactiva(){
+    public Disponible(){
 
     }
 
@@ -21,7 +21,7 @@ public class Inactiva : IEstadoDeMision
 
     public bool estaDisponible()
     {
-        return false;
+        return true;
     }
 
     public bool estaEntregada()
@@ -31,6 +31,6 @@ public class Inactiva : IEstadoDeMision
 
     public bool estaInactiva()
     {
-        return true;
+        return false;
     }
 }
