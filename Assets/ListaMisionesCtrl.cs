@@ -1,17 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ListaMisionesCtrl : MonoBehaviour {
 
 	// Use this for initialization
-	private Mision[] misionesDelJugador;
+	private Queue<Mision> misionesEnLaUi;
 	private bool estaActivo = false;
+	public GameObject misionEnListaUI;
 	void Start () {
 		//misionesDelJugador = GameObject.FindWithTag("Player").GetComponent<JugadorCtrl>().GetMisionesDelJugador();
 		OcultarListaDeMisiones();
 
 		OcultarTodasLasMisiones();
+		misionesEnLaUi = new Queue<Mision>(5);
 	}
 	
 	// Update is called once per frame
@@ -42,5 +45,19 @@ public class ListaMisionesCtrl : MonoBehaviour {
 		//GameObject.FindWithTag("Mision2UI").SetActive(false);
 		//GameObject.FindWithTag("Mision3UI").SetActive(false);
 		//GameObject.FindWithTag("Mision4UI").SetActive(false);
+	}
+
+	public void ActivarAnimacionNuevaMision(){
+
+	}
+
+	public void AgregarNuevaMision(Mision mision){
+		this.misionesEnLaUi.Enqueue(mision);
+		GameObject verticalLayoutMisiones = GameObject.FindGameObjectWithTag("VerticalLayoutMisiones");
+		GameObject misionEnUI = Object.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
+
+		misionEnUI.transform.SetParent(verticalLayoutMisiones.transform,false);
+		misionEnUI.GetComponentInChildren<Text>().text = mision.GetNombreMision();
+
 	}
 }
