@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public enum EstadoDelBaul{Abierto, Cerrado};
@@ -15,6 +16,8 @@ public class BaulCrtl : MonoBehaviour {
 	private Animator mantenerAbierto;
 	private Animator cerrarBaul;
 	private Animator idle;
+
+	public GameObject baulUI;
 
 	// Use this for initialization
 	void Start () {
@@ -52,13 +55,14 @@ void OnTriggerExit2D(Collider2D col){
              cerrarBaul.SetBool("cerrarBaul", true);
 			 mantenerAbierto.SetBool("mantenerbaulAbierto", false);
 			 anim.SetBool("apretaronParaAbrir", false);
-			 
+			 baulUI.SetActive(false);
 		}
 }
 
 	void AbrirBaul() {
 		anim.SetBool("apretaronParaAbrir", true);
 		cerrarBaul.SetBool("cerrarBaul", false);
+		baulUI.SetActive(true);
 	}
 
 }
