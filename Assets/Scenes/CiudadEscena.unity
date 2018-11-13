@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 237994969}
   m_Layer: 5
   m_Name: Conversacion
-  m_TagString: Untagged
+  m_TagString: ConversacionUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -676,7 +676,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: e0d488aea3339cd4bade203edfe1bf68, type: 3}
-    m_FontSize: 40
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -741,8 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96b33809439a3b41846f679311e6ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lucas: {fileID: 596378641}
-  conversacion: {fileID: 237994967}
 --- !u!212 &794353435
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1860,7 +1858,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1875312234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204b5bc2dc2cbcb4dba92b98bb427c6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbb90b53892e784f9de114e51a59ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1885130987

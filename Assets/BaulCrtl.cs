@@ -26,6 +26,7 @@ public class BaulCrtl : MonoBehaviour {
 		mantenerAbierto = GetComponent<Animator>();
 		cerrarBaul = GetComponent<Animator>();
         idle = GetComponent<Animator>();
+		baulUI.SetActive(false);
 	}
 	
 	// Update is called once per frame

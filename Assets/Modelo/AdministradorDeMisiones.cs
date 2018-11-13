@@ -47,7 +47,7 @@ public class AdministradorDeMisiones
 
     public void ActivarMision(Mision mision){
         mision.SetEstado(new Activa());
-        GameObject.FindGameObjectWithTag("ListaMisiones").GetComponent<ListaMisionesCtrl>().AgregarNuevaMision(mision);
+        GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().AgregarNuevaMision(mision);
         this.misiones.Dequeue();
     }
 

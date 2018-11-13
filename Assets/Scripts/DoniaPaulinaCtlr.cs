@@ -5,11 +5,16 @@ using UnityEngine.UI;
 
 public class DoniaPaulinaCtlr : MonoBehaviour
 {
-    public GameObject conversacion;
+    private GameObject conversacion;
     private Queue<string> conversacionActual;
     private Mision misionActual;
 
     // Use this for initialization
+
+    void Awake(){
+        conversacion = GameObject.FindGameObjectWithTag("UI").transform.Find("Conversacion").gameObject;
+
+    }
     void Start()
     {
         conversacionActual = new Queue<string>();
@@ -25,14 +30,26 @@ public class DoniaPaulinaCtlr : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
-        this.ComportamientoJugando(col);
+        if(this.MeHablaElJugadorEnEstadoJugando(col)){
+            this.ComportamientoJugando(col);
+        }
+        if(this.MeHablaElJugadorEnEstadoConversando(col)){
         this.ComportamientoConversando(col);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        this.ComportamientoJugando(col);
+        if(this.MeHablaElJugadorEnEstadoJugando(col)){
+            this.ComportamientoJugando(col);
+        }
+        if(this.MeHablaElJugadorEnEstadoConversando(col)){
         this.ComportamientoConversando(col);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col){
+        this.DesactivarConversacion(null);
     }
     void ActivarConversacionNPC()
     {
@@ -78,31 +95,34 @@ public class DoniaPaulinaCtlr : MonoBehaviour
 
     void ComportamientoJugando(Collider2D col)
     {
-        if (col.gameObject.tag == "Player"
-        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Jugando
-        && (Input.GetKeyDown(KeyCode.Space)))
-        {
-            col.gameObject.GetComponent<JugadorCtrl>().IniciarConversacion();
-            ActivarConversacionNPC();
-            conversacion.GetComponentInChildren<Text>().text = this.conversacionActual.Dequeue();
-        }
+        col.gameObject.GetComponent<JugadorCtrl>().IniciarConversacion();
+        ActivarConversacionNPC();
+        conversacion.GetComponentInChildren<Text>().text = this.conversacionActual.Dequeue();
+        
     }
 
     void ComportamientoConversando(Collider2D col)
     {
-        if (col.gameObject.tag == "Player"
-            && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando
-            && (Input.GetKeyDown(KeyCode.Space))
-            )
-        {
-            if (this.conversacionActual.Count == 0){
-                this.DesactivarConversacion(this.misionActual);
-            }
-            else{
-                conversacion.GetComponentInChildren<Text>().text = this.conversacionActual.Dequeue();
-            }
-
+        
+        if (this.conversacionActual.Count == 0){
+            this.DesactivarConversacion(this.misionActual);
         }
+        else{
+            conversacion.GetComponentInChildren<Text>().text = this.conversacionActual.Dequeue();
+        }
+        
+    }
+
+    bool MeHablaElJugadorEnEstadoJugando(Collider2D col){
+        return (col.gameObject.tag == "Player"
+        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Jugando
+        && (Input.GetKeyDown(KeyCode.Space)));
+    }
+
+    bool MeHablaElJugadorEnEstadoConversando(Collider2D col){
+        return (col.gameObject.tag == "Player"
+        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando
+        && (Input.GetKeyDown(KeyCode.Space)));
     }
 
 }
