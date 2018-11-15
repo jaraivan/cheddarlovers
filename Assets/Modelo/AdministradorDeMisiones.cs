@@ -41,6 +41,7 @@ public class AdministradorDeMisiones
 		dialogo.AgregarLineaDeTextoLucas("Gracias! Dime que tengo que hacer");
 		dialogo.AgregarLineaDeTextoNPC("Ando necesitando algunas cosas del mercado, puedes ir a comprarlos y traerlos? Aquí tienes la lista de lo que necesito y el oro para eso…");
 		Mision mision = new Mision("Haciendo mandados a Doña Paulina",dialogo,"DoniaPaulina");
+        mision.SetPrecompensaOro(5);
 		AgregarMision(mision);
 	}
 
@@ -48,6 +49,8 @@ public class AdministradorDeMisiones
     public void ActivarMision(Mision mision){
         mision.SetEstado(new Activa());
         GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().AgregarNuevaMision(mision);
+        int oroAAgregar = mision.GetPrecompensaOro();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
         this.misiones.Dequeue();
     }
 

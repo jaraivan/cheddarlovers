@@ -21,6 +21,8 @@ public class JugadorCtrl : MonoBehaviour {
 	private int cantidadDeMisionesAgregadas = 0;
 	private AdministradorDeMisiones administradorDeMisiones;
 
+	private int oro = 0;
+
 	void Awake(){
 		Assert.IsNotNull(mapaInicial);
 		if(jugador == null) {
@@ -81,6 +83,17 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public GameObject GetMapa(){
 		return this.mapaInicial;
+	}
+
+	public int GetOro(){
+		return this.oro;
+	}
+	public void AgregarOro(int oroAAgregar){
+		this.oro += oroAAgregar;
+	}
+
+	public void RestarOro(int oroARestar){
+		this.oro -= oroARestar;
 	}
 	
 }

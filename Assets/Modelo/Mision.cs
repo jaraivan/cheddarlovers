@@ -11,8 +11,12 @@ public class Mision {
     public string propietario;
     public Dialogo dialogo;
     private Item recompensa = null;
+    private int recompensaOro = 0;
 
     private IEstadoDeMision estadoDeMision;
+    private Item precompensa = null;
+    private int precompensaOro = 0;
+
 
     
 	public Mision(string nombreDeMisionQueMeDan, Dialogo dialogoQueMeDan ,string propietarioMision) {
@@ -42,6 +46,9 @@ public class Mision {
     public Item GetRecompensa(){
         return this.recompensa;
     }
+    public Item GetPrecompensa(){
+        return this.precompensa;
+    }
 
     public IEstadoDeMision GetEstado(){
         return this.estadoDeMision;
@@ -54,4 +61,15 @@ public class Mision {
         return this.propietario;
     }
 
+    public int GetRecompensaOro(){
+        return this.recompensaOro;
+    }
+
+    public int GetPrecompensaOro(){
+        return this.precompensaOro;
+    }
+
+    public void SetPrecompensaOro(int oro){
+        this.precompensaOro = oro;
+    }
 }
