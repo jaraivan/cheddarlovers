@@ -8,24 +8,18 @@ using UnityEngine.UI;
 public enum EstadoDelBaul{Abierto, Cerrado};
 public class BaulCrtl : MonoBehaviour {
 
-	private EstadoDelBaul estadoDelBaul = EstadoDelBaul.Cerrado;
-
-	private BoxCollider2D col;
 
 	private Animator anim;
 	private Animator mantenerAbierto;
 	private Animator cerrarBaul;
-	private Animator idle;
 
 	public GameObject baulUI;
 
 	// Use this for initialization
 	void Start () {
-		col = GetComponent<BoxCollider2D>();
 		anim = GetComponent<Animator>();
 		mantenerAbierto = GetComponent<Animator>();
 		cerrarBaul = GetComponent<Animator>();
-        idle = GetComponent<Animator>();
 		baulUI.SetActive(false);
 	}
 	

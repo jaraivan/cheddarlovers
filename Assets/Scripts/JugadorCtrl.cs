@@ -18,7 +18,6 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public static JugadorCtrl jugador;
 
-	private int cantidadDeMisionesAgregadas = 0;
 	private AdministradorDeMisiones administradorDeMisiones;
 
 	private int oro = 0;

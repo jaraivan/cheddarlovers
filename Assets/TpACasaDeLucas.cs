@@ -5,11 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TpACasaDeLucas : MonoBehaviour {
 
-private BoxCollider2D col;
 
 	// Use this for initialization
 	void Start () {
-		col = GetComponent<BoxCollider2D>();
 	}
 	
 	// Update is called once per frame

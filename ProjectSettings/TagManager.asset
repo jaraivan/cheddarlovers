@@ -17,6 +17,7 @@ TagManager:
   - baulUI
   - ConversacionUI
   - TextoOro
+  - VLLI
   layers:
   - Default
   - TransparentFX

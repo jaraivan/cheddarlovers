@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class TpACiudad : MonoBehaviour {
 
-	private BoxCollider2D col;
-
-
 	// Use this for initialization
 	void Start () {
-		col = GetComponent<BoxCollider2D>();
 		
 	}
 	
