@@ -1874,6 +1874,7 @@ GameObject:
   - component: {fileID: 1450471898}
   - component: {fileID: 1450471900}
   - component: {fileID: 1450471899}
+  - component: {fileID: 1450471901}
   m_Layer: 5
   m_Name: TextoMisiones
   m_TagString: Untagged
@@ -1939,6 +1940,20 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1450471897}
   m_CullTransparentMesh: 0
+--- !u!114 &1450471901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1450471897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 0.3, y: 0.3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1453026311
 GameObject:
   m_ObjectHideFlags: 0

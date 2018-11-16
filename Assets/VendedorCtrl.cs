@@ -58,5 +58,7 @@ public class VendedorCtrl : MonoBehaviour {
 
 		itemEnUI.transform.SetParent(verticalLayoutListaItems.transform,false);
 		itemEnUI.GetComponent<ItemBotonYDescCtrl>().SetImagenPara(nombreItem);
+		itemEnUI.GetComponent<ItemBotonYDescCtrl>().SetDescripcionPara(nombreItem);
+		itemEnUI.GetComponent<ItemBotonYDescCtrl>().SetPrecioPara(nombreItem);
 	}
 }

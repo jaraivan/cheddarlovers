@@ -7,6 +7,8 @@ public class ItemBotonYDescCtrl : MonoBehaviour {
 
 	// Use this for initialization
 	private Image image;
+	private Text textoDescripcion;
+	private Text textoOro;
 
 	public Sprite pocionSprite;
 	public Sprite polloSprite;
@@ -33,6 +35,34 @@ public class ItemBotonYDescCtrl : MonoBehaviour {
 
 		}
 
+	}
+
+	public void SetDescripcionPara(string nombreDeItem){
+		textoDescripcion = transform.Find("RawImage").gameObject.transform.Find("TextoDescripcion").gameObject.GetComponent<Text>();
+		switch (nombreDeItem){
+			case "pocion":
+			textoDescripcion.text = "Pocion: Sirve para restaurar puntos de salud";
+			break;
+
+			case "pollo":
+			textoDescripcion.text = "Pollo: Sirve unicamente para la mision de Donia Paulina, no te lo podes comer, cagate de hambre boludo!";
+			break;
+
+		}
+	}
+
+	public void SetPrecioPara(string nombreDeItem){
+		textoOro = transform.Find("Precio").gameObject.transform.Find("Panel").gameObject.transform.Find("TextoPrecio").gameObject.GetComponent<Text>();
+		switch (nombreDeItem){
+			case "pocion":
+			textoOro.text = "50";
+			break;
+
+			case "pollo":
+			textoOro.text = "5";
+			break;
+
+		}
 	}
 
 
