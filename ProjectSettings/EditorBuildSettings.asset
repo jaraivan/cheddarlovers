@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CasaDeLucas.unity
     guid: 783a7c7a9841b77438a1fa4ffac6f2ce
+  - enabled: 1
+    path: Assets/Scenes/CasaDeClara.unity
+    guid: 750606a70c7caab4ca388bccdcb0ac3b
   m_configObjects: {}
