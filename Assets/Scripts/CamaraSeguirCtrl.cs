@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class CamaraSeguirCtrl : MonoBehaviour {
 
@@ -18,6 +19,7 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 		 Assert.IsNotNull(jugador);
 		
 		this.SetLimites(jugador.gameObject.GetComponent<JugadorCtrl>().GetMapa());
+		GameObject.FindGameObjectWithTag("UI").GetComponent<Canvas>().worldCamera = GetComponent<Camera>();
 		 
 		
 		

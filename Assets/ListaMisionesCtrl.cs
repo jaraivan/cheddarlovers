@@ -53,6 +53,7 @@ public class ListaMisionesCtrl : MonoBehaviour {
 
 	public void AgregarNuevaMision(Mision mision){
 		gameObject.SetActive(true);
+		gameObject.SetActive(true);
 		this.misionesEnLaUi.Enqueue(mision);
 		GameObject verticalLayoutMisiones = GameObject.FindGameObjectWithTag("VerticalLayoutMisiones");
 		GameObject misionEnUI = Object.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
