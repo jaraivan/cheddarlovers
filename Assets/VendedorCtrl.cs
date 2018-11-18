@@ -23,10 +23,21 @@ public class VendedorCtrl : MonoBehaviour {
 		
 	}
 
+	void OnDestroy(){
+	List<ItemBotonYDescCtrl> hijos = new List<ItemBotonYDescCtrl>();
+	GameObject verticalLayoutListaItems = GameObject.FindGameObjectWithTag("UI").gameObject.transform.Find("Mercado").gameObject.transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.transform.Find("VerticalLayoutListaItems").gameObject;
+	verticalLayoutListaItems.GetComponentsInChildren(true,hijos);
+
+	foreach (var item in hijos)
+	{
+		Destroy(item.gameObject);	
+	}
+	}
+
 	void OnTriggerStay2D(Collider2D col)
     {
         if(col.gameObject.tag == "Player" && (Input.GetKeyDown(KeyCode.Space))){
-			mercadoUI.SetActive(true);
+			this.mercadoUI.SetActive(true);
 			//mercadoUI.transform.position = Camera.main.GetComponent<Transform>().position;
 		}
     }
@@ -34,7 +45,7 @@ public class VendedorCtrl : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col)
     {
         if(col.gameObject.tag == "Player" && (Input.GetKeyDown(KeyCode.Space))){
-			mercadoUI.SetActive(true);
+			this.mercadoUI.SetActive(true);
 			//mercadoUI.transform.position = Camera.main.GetComponent<Transform>().position;
 		}
     }
@@ -42,7 +53,7 @@ public class VendedorCtrl : MonoBehaviour {
 	void OnTriggerExit2D(Collider2D col)
     {
         if(col.gameObject.tag == "Player"){
-			mercadoUI.SetActive(false);
+			this.mercadoUI.SetActive(false);
 		}
     }
 
@@ -55,7 +66,6 @@ public class VendedorCtrl : MonoBehaviour {
 		
 		GameObject verticalLayoutListaItems = GameObject.FindGameObjectWithTag("UI").gameObject.transform.Find("Mercado").gameObject.transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.transform.Find("VerticalLayoutListaItems").gameObject;
 		GameObject itemEnUI = Object.Instantiate(prefabItemEnUI,verticalLayoutListaItems.transform.position,Quaternion.identity);
-
 		itemEnUI.transform.SetParent(verticalLayoutListaItems.transform,false);
 		itemEnUI.GetComponent<ItemBotonYDescCtrl>().SetImagenPara(nombreItem);
 		itemEnUI.GetComponent<ItemBotonYDescCtrl>().SetDescripcionPara(nombreItem);
