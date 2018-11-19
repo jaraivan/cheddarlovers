@@ -20,6 +20,8 @@ public class JugadorCtrl : MonoBehaviour {
 
 	private AdministradorDeMisiones administradorDeMisiones;
 
+	private Inventario inventario;
+
 	private int oro = 0;
 
 	void Awake(){
@@ -39,6 +41,8 @@ public class JugadorCtrl : MonoBehaviour {
 		
 		estadoDelJugador = EstadoDelJugador.Jugando;
 		administradorDeMisiones = new AdministradorDeMisiones();
+		inventario = new Inventario();
+		
 	}
 	
 	// Update is called once per frame
@@ -93,6 +97,10 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public void RestarOro(int oroARestar){
 		this.oro -= oroARestar;
+	}
+
+	public void AdquirirItem(Item item){
+		this.inventario.AgregarItem(item);
 	}
 	
 }
