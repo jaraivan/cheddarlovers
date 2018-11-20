@@ -32,4 +32,8 @@ public class UICtrl : MonoBehaviour {
 		int oroDeLucas = GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().GetOro();
 		GameObject.FindGameObjectWithTag("TextoOro").GetComponent<Text>().text = oroDeLucas.ToString();
 	}
+
+	public void InteraccionBotonInventario(){
+		Inventario.instance.InteraccionBoton();
+	}
 }
