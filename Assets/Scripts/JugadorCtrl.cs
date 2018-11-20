@@ -41,7 +41,6 @@ public class JugadorCtrl : MonoBehaviour {
 		
 		estadoDelJugador = EstadoDelJugador.Jugando;
 		administradorDeMisiones = new AdministradorDeMisiones();
-		inventario = new Inventario();
 		
 	}
 	
