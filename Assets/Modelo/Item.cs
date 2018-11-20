@@ -2,10 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Item 
+[CreateAssetMenu(fileName = "NuevoItem",menuName = "Inventario/Item")]
+public class Item : ScriptableObject
 {
-private string nombreDeItem;
-private TipoDeItem caracteristica;
+public string nombreDeItem = "Nuevo Item";
+public Sprite icono = null;
+public bool vendible = false;
+public bool consumible = false;
+public bool comprable = false;
 
 }

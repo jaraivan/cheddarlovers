@@ -7,13 +7,10 @@ public class ListaMisionesCtrl : MonoBehaviour {
 
 	// Use this for initialization
 	private Queue<Mision> misionesEnLaUi;
-	private bool estaActivo = false;
 	public GameObject misionEnListaUI;
 	void Start () {
 		//misionesDelJugador = GameObject.FindWithTag("Player").GetComponent<JugadorCtrl>().GetMisionesDelJugador();
-		OcultarListaDeMisiones();
 
-		OcultarTodasLasMisiones();
 		misionesEnLaUi = new Queue<Mision>(5);
 	}
 	
@@ -23,29 +20,9 @@ public class ListaMisionesCtrl : MonoBehaviour {
 	}
 
 	public void SiApretoElBoton(){
-		if(!estaActivo){
-			MostrarListaDeMisiones();
-		}else{
-			OcultarListaDeMisiones();
-		}
+		gameObject.SetActive(!gameObject.activeSelf);
 	}
 
-	public void MostrarListaDeMisiones(){
-		estaActivo = true;
-		gameObject.SetActive(true);
-	}
-	public void OcultarListaDeMisiones(){
-		estaActivo = false;
-		gameObject.SetActive(false);
-	}
-
-	void OcultarTodasLasMisiones(){
-		//GameObject.FindWithTag("Mision0UI").SetActive(false);
-		//GameObject.FindWithTag("Mision1UI").SetActive(false);
-		//GameObject.FindWithTag("Mision2UI").SetActive(false);
-		//GameObject.FindWithTag("Mision3UI").SetActive(false);
-		//GameObject.FindWithTag("Mision4UI").SetActive(false);
-	}
 
 	public void ActivarAnimacionNuevaMision(){
 
