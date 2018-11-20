@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: 4495c75a2b1e71242b6ce517c96c6988
+guid: a2a8cfe5f6f3e9b449929528a4f8da09
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: panelLista_0
-    21300002: panelLista_1
-    21300004: panelLista_2
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -48,8 +45,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 5000
-  spriteBorder: {x: 88, y: 111, z: 90, w: 100}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 85, y: 110, z: 95, w: 100}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -85,31 +82,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: panelLista_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1200
-        height: 1212
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 87, y: 112, z: 90, w: 99}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 45d100c2192e79e458b99309b7a721d2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: efa15f67b72a4264fb6a36509e697fbe
+    spriteID: 459404f05c48002469e6abe17e7416f1
     vertices: []
     indices: 
     edges: []
