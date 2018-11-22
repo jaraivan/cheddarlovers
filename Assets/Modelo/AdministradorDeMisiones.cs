@@ -95,7 +95,7 @@ public class AdministradorDeMisiones : MonoBehaviour{
     public void ActivarMision(Mision mision){
         mision.estadoDeMision = EstadoDeMision.Activa;
         GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().AgregarNuevaMision(mision);
-        int oroAAgregar = mision.GetPrecompensaOro();
+        int oroAAgregar = mision.precompensaOro;
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
         //this.misiones.Dequeue();
     }
@@ -108,9 +108,9 @@ public class AdministradorDeMisiones : MonoBehaviour{
     public void Completar(Mision mision){
         mision.estadoDeMision= EstadoDeMision.Completada;
         GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().QuitarMisionCompletada(mision);
-        int oroAAgregar = mision.GetRecompensaOro();
+        int oroAAgregar = mision.recompensaOro;
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
-        Item recompensaItem = mision.GetRecompensa();
+        Item recompensaItem = mision.recompensa;
         //GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(recompensaItem);
 
     }

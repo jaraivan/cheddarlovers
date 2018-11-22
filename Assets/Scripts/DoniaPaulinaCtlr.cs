@@ -157,7 +157,7 @@ public class DoniaPaulinaCtlr : MonoBehaviour
 
     bool CumpleCondicionDeMision(Mision mision){
         
-        return Inventario.instance.TieneElItem(mision.GetItemCondicion());
+        return Inventario.instance.TieneElItem(mision.condicion);
     }
 
 }

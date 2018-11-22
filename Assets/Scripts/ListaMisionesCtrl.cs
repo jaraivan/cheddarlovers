@@ -37,7 +37,7 @@ public class ListaMisionesCtrl : MonoBehaviour {
 		GameObject misionEnUI = GameObject.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
 
 		misionEnUI.transform.SetParent(verticalLayoutMisiones.transform,false);
-		misionEnUI.GetComponentInChildren<Text>().text = mision.GetNombreMision();
+		misionEnUI.GetComponentInChildren<Text>().text = mision.nombreDeMision;
 
 	}
 
