@@ -29,14 +29,19 @@ public class ListaMisionesCtrl : MonoBehaviour {
 	}
 
 	public void AgregarNuevaMision(Mision mision){
-		gameObject.SetActive(true);
-		gameObject.SetActive(true);
+		//gameObject.SetActive(true);
+		//gameObject.SetActive(true);
 		this.misionesEnLaUi.Enqueue(mision);
+		transform.Find("ListaMisionesParent").gameObject.SetActive(true);
 		GameObject verticalLayoutMisiones = GameObject.FindGameObjectWithTag("VerticalLayoutMisiones");
-		GameObject misionEnUI = Object.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
+		GameObject misionEnUI = GameObject.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
 
 		misionEnUI.transform.SetParent(verticalLayoutMisiones.transform,false);
 		misionEnUI.GetComponentInChildren<Text>().text = mision.GetNombreMision();
 
+	}
+
+	public void QuitarMisionCompletada(Mision mision){
+		//misionesEnLaUi.Dequeue();
 	}
 }

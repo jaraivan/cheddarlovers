@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -20,8 +20,11 @@ public class JugadorCtrl : MonoBehaviour {
 
 
 	private Inventario inventario;
+	private AdministradorDeMisiones administradorDeMisiones;
 
 	public int oro = 0;
+
+	public Item pollo;
 
 	void Awake(){
 		Assert.IsNotNull(mapaInicial);
@@ -39,7 +42,8 @@ public class JugadorCtrl : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D>();
 		
 		estadoDelJugador = EstadoDelJugador.Jugando;
-		administradorDeMisiones = new AdministradorDeMisiones();
+		
+		//administradorDeMisiones.SetPollo(Object.Instantiate(pollo));
 		
 	}
 	
@@ -63,7 +67,10 @@ public class JugadorCtrl : MonoBehaviour {
 
 	void FixedUpdate(){
 		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
+		/* if(Inventario.instance.TieneElItem(pollo)){
+		print("TENGO EL MALDITO POLLO");
 
+		} */
 	}
 
 	public void IniciarConversacion(){
@@ -77,9 +84,7 @@ public class JugadorCtrl : MonoBehaviour {
 		return this.estadoDelJugador;
 	}
 
-	public AdministradorDeMisiones GetAdministradorDeMisiones(){
-		return this.administradorDeMisiones;
-	}
+
 
 	public GameObject GetMapa(){
 		return this.mapaInicial;

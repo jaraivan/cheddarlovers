@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,8 +6,14 @@ using UnityEngine.UI;
 public class DoniaPaulinaCtlr : MonoBehaviour
 {
     private GameObject conversacion;
-    private Queue<string> conversacionActual;
-    private Mision misionActual;
+    //private Queue<string> conversacionActual;
+    public Dialogo dialogoActual;
+    public Dialogo dialogoSinMision;
+    public Dialogo dialogoSinCondicion;
+    public int leyendoLinea = 0;
+ 
+    public Mision misionActual ;
+    public Item pollo;
 
     // Use this for initialization
 
@@ -17,28 +23,30 @@ public class DoniaPaulinaCtlr : MonoBehaviour
     }
     void Start()
     {
-        conversacionActual = new Queue<string>();
-
+        //conversacionActual = new Queue<string>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+       
     }
 
     void OnTriggerStay2D(Collider2D col)
     {
+        
         if(this.MeHablaElJugadorEnEstadoJugando(col)){
             this.ComportamientoJugando(col);
         }
         if(this.MeHablaElJugadorEnEstadoConversando(col)){
         this.ComportamientoConversando(col);
         }
+
+        
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+     void OnTriggerEnter2D(Collider2D col)
     {
         if(this.MeHablaElJugadorEnEstadoJugando(col)){
             this.ComportamientoJugando(col);
@@ -46,6 +54,7 @@ public class DoniaPaulinaCtlr : MonoBehaviour
         if(this.MeHablaElJugadorEnEstadoConversando(col)){
         this.ComportamientoConversando(col);
         }
+    
     }
 
     void OnTriggerExit2D(Collider2D col){
@@ -54,15 +63,32 @@ public class DoniaPaulinaCtlr : MonoBehaviour
     void ActivarConversacionNPC()
     {
         conversacion.SetActive(true);
-        this.misionActual = GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().GetAdministradorDeMisiones().GetMisionParaMi("DoniaPaulina");
+        this.misionActual = AdministradorDeMisiones.instance.GetMisionParaMi("DoniaPaulina");
+        
         if (this.misionActual == null)
         {
-            conversacion.GetComponentInChildren<Text>().text = "No tengo misiones para ti";
+            this.dialogoActual = dialogoSinMision;
+            //conversacion.GetComponentInChildren<Text>().text = "No tengo misiones para ti";
 
         }
         else
         {
-            this.conversacionActual = CopiarConversacion(this.misionActual.GetDialogo().GetLineasDeTexto());
+            if(this.misionActual.estadoDeMision == EstadoDeMision.Disponible){
+            //this.conversacionActual = CopiarConversacion2(this.misionActual.GetDialogoInicio().GetLineasDeTexto2());
+            this.dialogoActual = misionActual.dialogoInicio;
+            }else{
+
+            if(this.misionActual.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(misionActual)){
+            //this.conversacionActual = CopiarConversacion2(this.misionActual.GetDialogoFin().GetLineasDeTexto2());
+            this.dialogoActual = misionActual.dialogoFin;
+            }
+
+            if(this.misionActual.estadoDeMision == EstadoDeMision.Activa  && !this.CumpleCondicionDeMision(misionActual)){
+                //conversacion.GetComponentInChildren<Text>().text = "No tenes lo que te pido";
+                this.dialogoActual = dialogoSinCondicion;
+            }
+            }
+
             
 
 
@@ -74,54 +100,59 @@ public class DoniaPaulinaCtlr : MonoBehaviour
         JugadorCtrl lucas = GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>();
 
         lucas.IniciarJugando();
-        if (mision != null)
+        if (mision != null && mision.estadoDeMision == EstadoDeMision.Disponible)
         {
-            lucas.GetAdministradorDeMisiones().ActivarMision(mision);
+            AdministradorDeMisiones.instance.ActivarMision(mision);
+        }
+        if (mision != null && mision.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(mision))
+        {
+            AdministradorDeMisiones.instance.Completar(mision);
+            dialogoActual = dialogoSinMision;
+        }
+        if (mision != null && mision.estadoDeMision == EstadoDeMision.Activa && !this.CumpleCondicionDeMision(mision))
+        {
+            //AdministradorDeMisiones.instance.Completar(mision);
+            dialogoActual = dialogoSinCondicion;
         }
         conversacion.SetActive(false);
+        leyendoLinea = 0;
+        
     }
 
-    Queue<string> CopiarConversacion(Queue<string> queueQueMePasan)
-    {
-        Queue<string> nuevaQueue = new Queue<string>();
-
-        foreach (string e in queueQueMePasan)
-        {
-            nuevaQueue.Enqueue(e);
-        }
-
-        return nuevaQueue;
-    }
 
     void ComportamientoJugando(Collider2D col)
     {
         col.gameObject.GetComponent<JugadorCtrl>().IniciarConversacion();
         ActivarConversacionNPC();
-        conversacion.GetComponentInChildren<Text>().text = this.conversacionActual.Dequeue();
+        conversacion.GetComponentInChildren<Text>().text = this.dialogoActual.lineasDeTexto[leyendoLinea];
+        //leyendoLinea++;
+        //ComportamientoConversando2(col);
         
     }
+
 
     void ComportamientoConversando(Collider2D col)
     {
         
-        if (this.conversacionActual.Count == 0){
+        if (this.leyendoLinea == this.dialogoActual.lineasDeTexto.Count){
             this.DesactivarConversacion(this.misionActual);
         }
         else{
-            conversacion.GetComponentInChildren<Text>().text = this.conversacionActual.Dequeue();
+            conversacion.GetComponentInChildren<Text>().text = this.dialogoActual.lineasDeTexto[leyendoLinea];
+            leyendoLinea++;
         }
         
     }
 
     bool MeHablaElJugadorEnEstadoJugando(Collider2D col){
         return (col.gameObject.tag == "Player"
-        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Jugando
-        && (Input.GetKeyDown(KeyCode.Space)));
+        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Jugando && (Input.GetKeyDown(KeyCode.Space)));
     }
 
     bool MeHablaElJugadorEnEstadoConversando(Collider2D col){
         return (col.gameObject.tag == "Player"
-        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando);
+        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando
+        && (Input.GetKeyDown(KeyCode.Space)));
     }
 
     bool CumpleCondicionDeMision(Mision mision){
