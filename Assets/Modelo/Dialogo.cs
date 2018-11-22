@@ -2,19 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Dialogo 
+[CreateAssetMenu(fileName = "NuevoDialogo",menuName = "AdministradorDeMisiones/Dialogo")]
+public class Dialogo :ScriptableObject
 {
 
     public string nombreNPC;
-    private Queue<string> lineasDeTexto;
+
+    public List<string> lineasDeTexto = new List<string>();
     //private int cantidadDeLineasCargadas = 0;
     // Use this for initialization
 
     public Dialogo(string nombreNPCQueMePasan)
     {
-        // inicializo un array de 30 strings maximo
-        lineasDeTexto = new Queue<string>();
         nombreNPC = nombreNPCQueMePasan;
     }
     void Start()
@@ -28,23 +27,7 @@ public class Dialogo
 
     }
 
-    public void AgregarLineaDeTextoLucas(string lineaDeTexto)
-    {
-        //lineasDeTexto.SetValue("Lucas: " + lineaDeTexto, cantidadDeLineasCargadas);
-        lineasDeTexto.Enqueue("Lucas: " + lineaDeTexto);
-        //cantidadDeLineasCargadas++;
-
-
-    }
-    public void AgregarLineaDeTextoNPC(string lineaDeTexto)
-    {
-        //lineasDeTexto.SetValue(nombreNPC + ": " + lineaDeTexto, cantidadDeLineasCargadas);
-        lineasDeTexto.Enqueue(nombreNPC + ": " + lineaDeTexto);
-        //cantidadDeLineasCargadas++;
-
-    }
-
-    public Queue<string> GetLineasDeTexto(){
+    public List<string> GetLineasDeTexto(){
         return this.lineasDeTexto;
     }
 

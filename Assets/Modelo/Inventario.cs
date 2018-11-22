@@ -49,4 +49,9 @@ public class Inventario : MonoBehaviour
         hijos[0].AdquirirItem(item);
     }
 
+    public bool TieneElItem(Item item){
+      
+        return this.items.Contains(item);
+    }
+
 }

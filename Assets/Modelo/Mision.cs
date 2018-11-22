@@ -2,37 +2,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
-public class Mision {
+using UnityEditor;
+public enum EstadoDeMision {Activa,Disponible,Completada,Inactiva,Entregada};
+[CreateAssetMenu(fileName = "NuevaMision",menuName = "AdministradorDeMisiones/Mision")]
+public class Mision : ScriptableObject  {
 
     public string nombreDeMision;
 
     public string propietario;
-    public Dialogo dialogo;
-    private Item recompensa = null;
-    private int recompensaOro = 0;
+    public Dialogo dialogoInicio;
+    public Dialogo dialogoFin;
+    public Item recompensa = null;
+    public Item condicion = null;
+    public int recompensaOro = 0;
 
-    private IEstadoDeMision estadoDeMision;
-    private Item precompensa = null;
-    private int precompensaOro = 0;
+    public EstadoDeMision estadoDeMision;
+    public Item precompensa = null;
+    public int precompensaOro = 0;
 
 
-    
-	public Mision(string nombreDeMisionQueMeDan, Dialogo dialogoQueMeDan ,string propietarioMision) {
+    /* 
+	public Mision(string nombreDeMisionQueMeDan, Dialogo dialogoDeInicio,Dialogo dialogoDeFin ,string propietarioMision) {
         this.nombreDeMision = nombreDeMisionQueMeDan;
-        this.dialogo = dialogoQueMeDan;
+        this.dialogoInicio = dialogoDeInicio;
+        this.dialogoFin = dialogoDeFin;
         estadoDeMision = new Disponible();
         this.propietario = propietarioMision;
-	}
+	} */
 
     // Use this for initialization
     public void Start(){
 
     }
 
-    public Dialogo GetDialogo(){
-        return this.dialogo;
+    public Dialogo GetDialogoInicio(){
+        return this.dialogoInicio;
+    }
+    public Dialogo GetDialogoFin(){
+        return this.dialogoFin;
     }
 
     public string GetNombreMision(){
@@ -50,13 +57,13 @@ public class Mision {
         return this.precompensa;
     }
 
-    public IEstadoDeMision GetEstado(){
+   /*  public IEstadoDeMision GetEstado(){
         return this.estadoDeMision;
     }
 
     public void SetEstado(IEstadoDeMision estado){
         this.estadoDeMision = estado;
-    }
+    } */
     public string GetPropietario(){
         return this.propietario;
     }
@@ -71,5 +78,13 @@ public class Mision {
 
     public void SetPrecompensaOro(int oro){
         this.precompensaOro = oro;
+    }
+
+    public void SetItemCondicion(Item item){
+        this.condicion = item;
+    }
+
+    public Item GetItemCondicion(){
+        return this.condicion;
     }
 }
