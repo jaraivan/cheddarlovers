@@ -10,8 +10,9 @@ public class ItemBotonYDescCtrl : MonoBehaviour {
 	private Text textoDescripcion;
 	private Text textoOro;
 
-	public Sprite pocionSprite;
-	public Sprite polloSprite;
+	public Item itemPrefab;
+
+
 	void Start () {
 		
 		
@@ -22,48 +23,33 @@ public class ItemBotonYDescCtrl : MonoBehaviour {
 		
 	}
 
-	public void SetImagenPara(string nombreDeItem){
-		image = transform.Find("BotonItem").gameObject.transform.Find("ImagenDelItem").gameObject.GetComponent<Image>();
-		switch (nombreDeItem){
-			case "pocion":
-			image.sprite = pocionSprite;
-			break;
 
-			case "pollo":
-			image.sprite = polloSprite;
-			break;
-
-		}
-
-	}
-
-	public void SetDescripcionPara(string nombreDeItem){
+		//pone las cosas en el mercado
+	public void SetealeTodo(Item item) {
+		itemPrefab = item;
 		textoDescripcion = transform.Find("RawImage").gameObject.transform.Find("TextoDescripcion").gameObject.GetComponent<Text>();
-		switch (nombreDeItem){
-			case "pocion":
-			textoDescripcion.text = "Pocion: Sirve para restaurar puntos de salud";
-			break;
-
-			case "pollo":
-			textoDescripcion.text = "Pollo: Sirve unicamente para la mision de Donia Paulina, no te lo podes comer, cagate de hambre boludo!";
-			break;
-
-		}
-	}
-
-	public void SetPrecioPara(string nombreDeItem){
 		textoOro = transform.Find("Precio").gameObject.transform.Find("Panel").gameObject.transform.Find("TextoPrecio").gameObject.GetComponent<Text>();
-		switch (nombreDeItem){
-			case "pocion":
-			textoOro.text = "50";
-			break;
+		image = transform.Find("BotonItem").gameObject.transform.Find("ImagenDelItem").gameObject.GetComponent<Image>();
+		textoDescripcion.text = item.descripcion;
+		textoOro.text = item.precio.ToString();
+		image.sprite = item.icono;
+	}
 
-			case "pollo":
-			textoOro.text = "5";
-			break;
 
+	public void ComprarItem() {
+		
+		JugadorCtrl lucas = GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>();
+		if(lucas.GetOro() >= itemPrefab.precio) {
+			lucas.RestarOro(itemPrefab.precio);
+			lucas.AdquirirItem(itemPrefab);
+			GameObject comprarPanel = GameObject.FindGameObjectWithTag("UI").gameObject.transform.Find("Mercado").gameObject.transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.transform.Find("Comprar").gameObject;
+			comprarPanel.SetActive(false);
 		}
 	}
 
+	public void PanelDeCompra() {
+		GameObject comprarPanel = GameObject.FindGameObjectWithTag("UI").gameObject.transform.Find("Mercado").gameObject.transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.transform.Find("Comprar").gameObject;
+		comprarPanel.SetActive(true);
+	}
 
 }

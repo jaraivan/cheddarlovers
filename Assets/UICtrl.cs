@@ -43,4 +43,5 @@ public class UICtrl : MonoBehaviour {
 		ListaMisionesParent.SetActive(!ListaMisionesParent.gameObject.activeSelf);
 		
 	}
+
 }

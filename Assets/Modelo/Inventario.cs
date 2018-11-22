@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventario : MonoBehaviour
 {
@@ -19,16 +20,20 @@ public class Inventario : MonoBehaviour
         instance = this;
     }
     #endregion
-    public List<Item> items = new List<Item>();
     public int espacio = 6;
+    public List<Item> items = new List<Item>();
+    
     
     public void AgregarItem(Item item)
     {
-        if(items.Count >= espacio){
+       /*  if(items.Count >= espacio){
             Debug.Log("No tenes espacio en el inventario");
             return;
-        }
+        } */
         this.items.Add(item);
+        GameObject itemsParent = transform.Find("ItemsParent").gameObject;
+        itemsParent.SetActive(true);
+        ActualizarSlot(item);
     }
 
     public void InteraccionBoton(){
@@ -36,5 +41,12 @@ public class Inventario : MonoBehaviour
         itemsParent.SetActive(!itemsParent.activeSelf);
     }
 
+    public void ActualizarSlot(Item item) {
+        List<SlotCtrl> hijos = new List<SlotCtrl>();
+	
+	 transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
+     
+        hijos[0].AdquirirItem(item);
+    }
 
 }

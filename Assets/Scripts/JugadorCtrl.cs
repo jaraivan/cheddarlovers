@@ -22,7 +22,7 @@ public class JugadorCtrl : MonoBehaviour {
 
 	private Inventario inventario;
 
-	private int oro = 0;
+	public int oro = 0;
 
 	void Awake(){
 		Assert.IsNotNull(mapaInicial);
@@ -65,7 +65,6 @@ public class JugadorCtrl : MonoBehaviour {
 	void FixedUpdate(){
 		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
 
-		print(rb2d.velocity);
 	}
 
 	public void IniciarConversacion(){
@@ -99,7 +98,7 @@ public class JugadorCtrl : MonoBehaviour {
 	}
 
 	public void AdquirirItem(Item item){
-		this.inventario.AgregarItem(item);
+		Inventario.instance.AgregarItem(item);
 	}
 	
 }
