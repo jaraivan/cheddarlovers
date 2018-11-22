@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -18,7 +18,6 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public static JugadorCtrl jugador;
 
-	private AdministradorDeMisiones administradorDeMisiones;
 
 	private Inventario inventario;
 

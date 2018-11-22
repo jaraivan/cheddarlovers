@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -121,8 +121,12 @@ public class DoniaPaulinaCtlr : MonoBehaviour
 
     bool MeHablaElJugadorEnEstadoConversando(Collider2D col){
         return (col.gameObject.tag == "Player"
-        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando
-        && (Input.GetKeyDown(KeyCode.Space)));
+        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando);
+    }
+
+    bool CumpleCondicionDeMision(Mision mision){
+        
+        return Inventario.instance.TieneElItem(mision.GetItemCondicion());
     }
 
 }

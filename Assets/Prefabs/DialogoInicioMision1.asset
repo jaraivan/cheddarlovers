@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
+  m_Name: DialogoInicioMision1
+  m_EditorClassIdentifier: 
+  nombreNPC: DoniaPaulina
+  lineasDeTexto:
+  - "Lucas: Hola Do\xF1a Paulina"
+  - "DoniaPaulina: Hola Lucas, te veo preocupado peque\xF1o, \xBFQu\xE9 ha pasado?"
+  - "Lucas: e acabo de enterar que mi padre ten\xEDa deudas, y me van sacar la casa
+    si no les doy el dinero que quieren\u2026 Desde el accidente en la mina, no he
+    conseguido trabajo, no se que voy a hacer!"
+  - "DoniaPaulina: Oh no que terrible! Me encantar\xEDa poder ayudarte, pero ahora
+    mismo, no se me ocurre como\u2026"
+  - "DoniaPaulina: Un momento, si haces algunos mandados para mi, podr\xEDa darte
+    unas monedas, no es mucho, pero por algo se empieza no?"
+  - 'Lucas: Gracias! Dime que tengo que hacer'
+  - "DoniaPaulina: Ando necesitando algunas cosas del mercado, puedes ir a comprarlos
+    y traerlos? Aqu\xED tienes la lista de lo que necesito y el oro para eso\u2026"
