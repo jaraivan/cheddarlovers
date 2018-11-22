@@ -10,5 +10,7 @@ public Sprite icono = null;
 public bool vendible = false;
 public bool consumible = false;
 public bool comprable = false;
+public string descripcion = "nuevaDescripcion";
+public int precio = 0;
 
 }

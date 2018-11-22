@@ -65,7 +65,7 @@ public class JugadorCtrl : MonoBehaviour {
 	void FixedUpdate(){
 		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
 
-
+		print(rb2d.velocity);
 	}
 
 	public void IniciarConversacion(){

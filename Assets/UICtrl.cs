@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UICtrl : MonoBehaviour {
 
 	public static UICtrl UI;
+	public Item pollo;
 
     void Awake(){
 		
@@ -35,5 +36,11 @@ public class UICtrl : MonoBehaviour {
 
 	public void InteraccionBotonInventario(){
 		Inventario.instance.InteraccionBoton();
+	}
+
+	public void InteraccionBotonMisiones(){
+		GameObject ListaMisionesParent = GameObject.FindGameObjectWithTag("ListaMisiones").transform.Find("ListaMisionesParent").gameObject;
+		ListaMisionesParent.SetActive(!ListaMisionesParent.gameObject.activeSelf);
+		
 	}
 }
