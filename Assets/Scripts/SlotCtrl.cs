@@ -22,7 +22,11 @@ public class SlotCtrl : MonoBehaviour {
 	}
 
 	public void ActualizarImagen(Item item){
-		transform.Find("Icono").gameObject.GetComponent<Image>().enabled = true;
-		transform.Find("Icono").gameObject.GetComponent<Image>().sprite = item.icono;
+		if(item == null) {
+			transform.Find("Icono").gameObject.GetComponent<Image>().enabled = false;
+		} else {
+			transform.Find("Icono").gameObject.GetComponent<Image>().enabled = true;
+			transform.Find("Icono").gameObject.GetComponent<Image>().sprite = item.icono;
+		}
 	}
 }

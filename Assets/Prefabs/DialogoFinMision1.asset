@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreNPC: DoniaPaulina
   lineasDeTexto:
-  - 'Lucas: Aqui tengo tu pollo'
+  - 'Lucas: Aqui te traje lo que me pediste'
   - 'DoniaPaulina: Gracias, aqui tienes la recompensa!'

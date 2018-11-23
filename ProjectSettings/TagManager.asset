@@ -18,6 +18,7 @@ TagManager:
   - ConversacionUI
   - TextoOro
   - VLLI
+  - IzquierdaDeLucas
   layers:
   - Default
   - TransparentFX

@@ -21,16 +21,16 @@ public class PerroCtrl : MonoBehaviour {
 		
 		posInicial = new Vector3(jugador.transform.position.x -1f,jugador.transform.position.y,transform.position.z);
 		transform.position = posInicial;
-		target = jugador.transform.position;
+		target = new Vector3(jugador.transform.position.x -1f,jugador.transform.position.y,transform.position.z);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		target = jugador.transform.position;
-		float dist = Vector3.Distance(jugador.transform.position, transform.position);
-		if(jugador.GetComponent<Animator>().GetBool("caminando") || dist > distanciaConElJugador) {
-		transform.position  = Vector3.SmoothDamp(transform.position,target, ref velocidad,tiempoDeSuavizado,maxSpeed);
-	} 
+		target = new Vector3(jugador.transform.position.x -1f,jugador.transform.position.y,transform.position.z);
+		//float dist = Vector3.Distance(jugador.transform.position, transform.position);
+		/* if(jugador.GetComponent<Animator>().GetBool("caminando") || dist > distanciaConElJugador) {
+		}  */
+			transform.position  = Vector3.SmoothDamp(transform.position,target, ref velocidad,tiempoDeSuavizado,maxSpeed);
 	}
 	
 }

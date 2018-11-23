@@ -54,4 +54,8 @@ public class Inventario : MonoBehaviour
         return this.items.Contains(item);
     }
 
+    public void QuitarItem(Item item) {
+        this.items.Remove(item);
+    }
+
 }

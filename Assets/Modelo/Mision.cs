@@ -20,4 +20,6 @@ public class Mision : ScriptableObject  {
     public Item precompensa = null;
     public int precompensaOro = 0;
 
+    public Mision proxMision;
+
 }

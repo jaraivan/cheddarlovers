@@ -111,8 +111,10 @@ public class AdministradorDeMisiones : MonoBehaviour{
         int oroAAgregar = mision.recompensaOro;
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
         Item recompensaItem = mision.recompensa;
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(recompensaItem);
-
+        GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(recompensaItem);
+         if(mision.condicion != null) {
+            Inventario.instance.QuitarItem(mision.condicion);
+         }
     }
     
 }
