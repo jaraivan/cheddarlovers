@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,8 +24,8 @@ public class AdministradorDeMisiones : MonoBehaviour{
 
     //public Queue<Mision> misiones = new Queue<Mision>();
     public List<Mision> misiones2 = new List<Mision>();
-    public Item pollo;
-    public Mision mision1;
+    //public Item pollo;
+    //public Mision mision1;
 
   /*   public AdministradorDeMisiones(Item pollo1){
         misiones = new Queue<Mision>();
@@ -33,7 +34,7 @@ public class AdministradorDeMisiones : MonoBehaviour{
     } */
 
     void Start(){
-       this.AgregarMision(mision1);
+       //this.AgregarMision(mision1);
         
     }
 
@@ -51,6 +52,21 @@ public class AdministradorDeMisiones : MonoBehaviour{
             }
         }
         return null;
+    }
+
+    public List<Mision> GetMisionesActivas(){
+        List<Mision> misionesActivas = new List<Mision>();
+
+        foreach(Mision m in this.misiones2){
+            if(m!=null){
+            if(m.estadoDeMision == EstadoDeMision.Activa){
+                misionesActivas.Add(m);
+            }
+
+            }
+        }
+
+        return misionesActivas;
     }
 
     
@@ -93,21 +109,31 @@ public class AdministradorDeMisiones : MonoBehaviour{
 
 
     public void ActivarMision(Mision mision){
-        mision.estadoDeMision = EstadoDeMision.Activa;
-        GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().AgregarNuevaMision(mision);
+        //mision.estadoDeMision = EstadoDeMision.Activa;
+        BuscarYActivarMisionEnLaLista(mision);
+        //GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().AgregarNuevaMision(mision);
+        GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().ActualizarListaDeMisiones();
         int oroAAgregar = mision.precompensaOro;
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
         //this.misiones.Dequeue();
     }
 
+    private void BuscarYActivarMisionEnLaLista(Mision mision)
+    {
+        misiones2.Find(m=> m.nombreDeMision == mision.nombreDeMision).estadoDeMision = EstadoDeMision.Activa;
+    }
 
-    public void SetPollo(Item item){
-        this.pollo = item;
+    private void BuscarYCompletarMisionEnLaLista(Mision mision)
+    {
+        misiones2.Find(m=> m.nombreDeMision == mision.nombreDeMision).estadoDeMision = EstadoDeMision.Completada;
     }
 
     public void Completar(Mision mision){
-        mision.estadoDeMision= EstadoDeMision.Completada;
-        GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().QuitarMisionCompletada(mision);
+        //mision.estadoDeMision= EstadoDeMision.Completada;
+        BuscarYCompletarMisionEnLaLista(mision);
+        //GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().QuitarMisionCompletada(mision);
+        GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().ActualizarListaDeMisiones();
+        
         int oroAAgregar = mision.recompensaOro;
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
         Item recompensaItem = mision.recompensa;

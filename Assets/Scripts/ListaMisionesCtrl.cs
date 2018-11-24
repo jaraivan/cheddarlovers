@@ -42,6 +42,31 @@ public class ListaMisionesCtrl : MonoBehaviour {
 	}
 
 	public void QuitarMisionCompletada(Mision mision){
-		//misionesEnLaUi.Dequeue();
+		ActualizarListaDeMisiones();
+	}
+
+	public void ActualizarListaDeMisiones(){
+
+		transform.Find("ListaMisionesParent").gameObject.SetActive(true);
+		GameObject verticalLayoutMisiones = GameObject.FindGameObjectWithTag("VerticalLayoutMisiones");
+		VaciarHijosDe(verticalLayoutMisiones);
+		List<Mision> misionesActivas = AdministradorDeMisiones.instance.GetMisionesActivas();
+
+		foreach(Mision m in misionesActivas){
+		GameObject misionEnUI = GameObject.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
+		misionEnUI.transform.SetParent(verticalLayoutMisiones.transform,false);
+		misionEnUI.GetComponentInChildren<Text>().text = m.nombreDeMision;
+		}
+	}
+
+	private void VaciarHijosDe(GameObject vLM){
+	List<MisionEnListaUICtrl> hijos = new List<MisionEnListaUICtrl>();
+
+	vLM.GetComponentsInChildren(true,hijos);
+
+	foreach (var o in hijos)
+	{
+		Destroy(o.gameObject);	
+	}
 	}
 }

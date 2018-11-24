@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 222663561723664652}
   - component: {fileID: 114073174641131514}
   - component: {fileID: 114082227779110482}
+  - component: {fileID: 114540584288432706}
   m_Layer: 5
   m_Name: MisionEnListaUI
   m_TagString: Mision0UI
@@ -147,6 +148,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Ayudando a Donia Paulina
+--- !u!114 &114540584288432706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432547907927064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1c0e8877326e547a5e5fd653e674ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &222269775428635172
 CanvasRenderer:
   m_ObjectHideFlags: 1

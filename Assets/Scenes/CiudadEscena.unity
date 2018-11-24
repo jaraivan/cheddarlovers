@@ -1381,9 +1381,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   misiones2:
   - {fileID: 11400000, guid: 63f44099e6e5eab4281f9476a149c112, type: 2}
-  - {fileID: 0}
-  pollo: {fileID: 0}
-  mision1: {fileID: 11400000, guid: 63f44099e6e5eab4281f9476a149c112, type: 2}
 --- !u!1001 &550542113
 Prefab:
   m_ObjectHideFlags: 0
@@ -3973,7 +3970,7 @@ GameObject:
   m_Layer: 0
   m_Name: TarguetPerro
   m_TagString: IzquierdaDeLucas
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
