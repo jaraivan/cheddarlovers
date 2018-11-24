@@ -18,3 +18,5 @@ MonoBehaviour:
   comprable: 1
   descripcion: 'Pocion: Sirve para restaurar puntos de salud'
   precio: 50
+  puntosDeHambre: 0
+  puntosDeVida: 25

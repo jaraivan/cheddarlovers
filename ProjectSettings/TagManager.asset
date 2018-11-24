@@ -7,9 +7,6 @@ TagManager:
   - NPC
   - Mision0UI
   - Mision1UI
-  - Mision2UI
-  - Mision3UI
-  - Mision4UI
   - UI
   - ListaMisiones
   - BotonMisiones
@@ -19,6 +16,8 @@ TagManager:
   - TextoOro
   - VLLI
   - IzquierdaDeLucas
+  - BarraDeVida
+  - BarraDeEnergia
   layers:
   - Default
   - TransparentFX

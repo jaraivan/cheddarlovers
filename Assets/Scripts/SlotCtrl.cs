@@ -25,4 +25,9 @@ public class SlotCtrl : MonoBehaviour {
     {
         return itemPrefab == null;
     }
+
+	public void BotonSlot()
+    {
+		GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().UsarItem(itemPrefab);
+    }
 }

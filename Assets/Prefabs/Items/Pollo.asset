@@ -19,3 +19,5 @@ MonoBehaviour:
   descripcion: 'Pollo: Sirve unicamente para la mision de Donia Paulina, no te lo
     podes comer...'
   precio: 5
+  puntosDeHambre: 25
+  puntosDeVida: 5

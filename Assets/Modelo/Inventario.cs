@@ -31,7 +31,7 @@ public class Inventario : MonoBehaviour
         //print(items.Count <= items.Capacity);
         if(items.Count >= items.Capacity){
         Debug.Log("No tenes espacio en el inventario");
-        return;
+        throw new InventarioLlenoException();
         } 
         
         this.items.Add(item);
