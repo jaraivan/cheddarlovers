@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
-  m_Name: PrimeraMision
+  m_Name: Mision1
   m_EditorClassIdentifier: 
   nombreDeMision: AyudandoADoniaPaulina
   propietario: DoniaPaulina
@@ -18,7 +18,7 @@ MonoBehaviour:
   recompensa: {fileID: 0}
   condicion: {fileID: 11400000, guid: 6a1ed339859c4d044bdd4b132243112f, type: 2}
   recompensaOro: 50
-  estadoDeMision: 2
+  estadoDeMision: 1
   precompensa: {fileID: 0}
   precompensaOro: 5
-  proxMision: {fileID: 0}
+  proxMision: {fileID: 11400000, guid: 14bf2bf60b65c4c4595d4bb27c5a7ecf, type: 2}
