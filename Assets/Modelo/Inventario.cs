@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,15 +22,18 @@ public class Inventario : MonoBehaviour
     }
     #endregion
     public int espacio = 6;
-    public List<Item> items = new List<Item>();
+    public List<Item> items = new List<Item>(6);
     
     
     public void AgregarItem(Item item)
     {
-       /*  if(items.Count >= espacio){
-            Debug.Log("No tenes espacio en el inventario");
-            return;
-        } */
+        //print(items.Count);
+        //print(items.Count <= items.Capacity);
+        if(items.Count >= items.Capacity){
+        Debug.Log("No tenes espacio en el inventario");
+        return;
+        } 
+        
         this.items.Add(item);
         GameObject itemsParent = transform.Find("ItemsParent").gameObject;
         itemsParent.SetActive(true);
@@ -44,9 +48,21 @@ public class Inventario : MonoBehaviour
     public void ActualizarSlot(Item item) {
         List<SlotCtrl> hijos = new List<SlotCtrl>();
 	
-	 transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
-     
-        hijos[0].AdquirirItem(item);
+	    transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
+
+        SlotCtrl slotVacio = BuscarSlotVacio(hijos);
+        slotVacio.AdquirirItem(item);
+    }
+
+    private SlotCtrl BuscarSlotVacio(List<SlotCtrl> hijos)
+    {
+        foreach(SlotCtrl s in hijos){
+           if(s.EstaVacio()){
+               return s;
+           }
+        }
+        throw new InventarioLlenoException();
+
     }
 
     public bool TieneElItem(Item item){
