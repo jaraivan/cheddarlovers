@@ -123,6 +123,11 @@ public class AdministradorDeMisiones : MonoBehaviour{
         misiones2.Find(m=> m.nombreDeMision == mision.nombreDeMision).estadoDeMision = EstadoDeMision.Activa;
     }
 
+    private void BuscarYHacerDisponibleMisionEnLaLista(Mision mision)
+    {
+        misiones2.Find(m=> m.nombreDeMision == mision.nombreDeMision).estadoDeMision = EstadoDeMision.Disponible;
+    }
+
     private void BuscarYCompletarMisionEnLaLista(Mision mision)
     {
         misiones2.Find(m=> m.nombreDeMision == mision.nombreDeMision).estadoDeMision = EstadoDeMision.Completada;
@@ -141,6 +146,7 @@ public class AdministradorDeMisiones : MonoBehaviour{
          if(mision.condicion != null) {
             Inventario.instance.QuitarItem(mision.condicion);
          }
+        BuscarYHacerDisponibleMisionEnLaLista(mision.proxMision);
     }
     
 }

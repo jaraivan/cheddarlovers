@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
-  m_Name: NuevaMision
+  m_Name: Mision2
   m_EditorClassIdentifier: 
   nombreDeMision: El ingrediente especial
   propietario: DoniaPaulina
-  dialogoInicio: {fileID: 0}
-  dialogoFin: {fileID: 0}
-  recompensa: {fileID: 0}
-  condicion: {fileID: 0}
+  dialogoInicio: {fileID: 11400000, guid: 404f6b9924e18ae44af9371a4acee74f, type: 2}
+  dialogoFin: {fileID: 11400000, guid: bc30acda6ee82164faa2a87b8a4f2816, type: 2}
+  recompensa: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
+  condicion: {fileID: 11400000, guid: 2766dd17452b54f4c91d56322aa80e27, type: 2}
   recompensaOro: 100
   estadoDeMision: 3
   precompensa: {fileID: 0}
