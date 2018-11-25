@@ -89,4 +89,8 @@ public class Inventario : MonoBehaviour
         
     }
 
+    public List<Item> GetItemsEnBaul(){
+        return this.itemsEnElBaul;
+    }
+
 }

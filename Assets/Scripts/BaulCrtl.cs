@@ -21,6 +21,7 @@ public class BaulCrtl : MonoBehaviour {
 		mantenerAbierto = GetComponent<Animator>();
 		cerrarBaul = GetComponent<Animator>();
 		GameObject.FindGameObjectWithTag("ParentBaulUI").SetActive(false);
+		
 		//baulUI.SetActive(false);
 	}
 	
@@ -51,7 +52,8 @@ void OnTriggerExit2D(Collider2D col){
              cerrarBaul.SetBool("cerrarBaul", true);
 			 mantenerAbierto.SetBool("mantenerbaulAbierto", false);
 			 anim.SetBool("apretaronParaAbrir", false);
-			 baulUI.SetActive(false);
+			 GameObject.FindGameObjectWithTag("baulUI").transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.SetActive(false);
+			 
 		}
 }
 
@@ -60,6 +62,8 @@ void OnTriggerExit2D(Collider2D col){
 		cerrarBaul.SetBool("cerrarBaul", false);
 
 		GameObject.FindGameObjectWithTag("baulUI").transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.SetActive(true);
+		VaciarTodosLosSlotsEnUI();
+		ActualizarTodosLosSlotsDelBaul();
 		//baulUI.SetActive(true);
 	}
 
@@ -91,6 +95,25 @@ void OnTriggerExit2D(Collider2D col){
            }
         }
         throw new BaulLlenoException();
+	}
+
+	public void ActualizarTodosLosSlotsDelBaul(){
+		
+		foreach(Item item in Inventario.instance.GetItemsEnBaul()){
+			ActualizarSlotsBaul(item);
+		}
+	}
+
+	public void VaciarTodosLosSlotsEnUI(){
+
+		List<BaulSlotCtrl> hijos = new List<BaulSlotCtrl>();
+
+		GameObject parentBaulUI = GameObject.FindGameObjectWithTag("ParentBaulUI");
+		parentBaulUI.GetComponentsInChildren(true,hijos);
+		foreach (BaulSlotCtrl slot in hijos)
+		{
+		slot.AdquirirItem(null);
+		}
 	}
 }
 
