@@ -18,6 +18,8 @@ TagManager:
   - IzquierdaDeLucas
   - BarraDeVida
   - BarraDeEnergia
+  - Baul
+  - ParentBaulUI
   layers:
   - Default
   - TransparentFX

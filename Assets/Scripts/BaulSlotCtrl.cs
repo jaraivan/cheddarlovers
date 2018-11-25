@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SlotCtrl : MonoBehaviour {
-
+public class BaulSlotCtrl : MonoBehaviour {
 	public Item itemPrefab;
 	public void AdquirirItem(Item item){
 		itemPrefab = item;
@@ -28,9 +26,11 @@ public class SlotCtrl : MonoBehaviour {
 
 	public void BotonSlot()
     {
-		GameObject.FindGameObjectWithTag("Baul").GetComponent<BaulCrtl>().AgregarItemAlBaul(itemPrefab);
-		itemPrefab = null;
-		ActualizarImagen(itemPrefab);
-		//GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().UsarItem(itemPrefab);
+		if(!EstaVacio()){
+		GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(itemPrefab);
+		Inventario.instance.QuitarItemDelBaul(itemPrefab);
+		itemPrefab=null;
+		ActualizarImagen(null);
+		}
     }
 }

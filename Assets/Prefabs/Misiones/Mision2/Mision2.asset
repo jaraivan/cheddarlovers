@@ -18,7 +18,7 @@ MonoBehaviour:
   recompensa: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
   condicion: {fileID: 11400000, guid: 2766dd17452b54f4c91d56322aa80e27, type: 2}
   recompensaOro: 100
-  estadoDeMision: 2
+  estadoDeMision: 3
   precompensa: {fileID: 0}
   precompensaOro: 0
   proxMision: {fileID: 0}

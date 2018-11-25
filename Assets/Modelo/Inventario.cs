@@ -23,6 +23,8 @@ public class Inventario : MonoBehaviour
     #endregion
     public int espacio = 6;
     public List<Item> items = new List<Item>(6);
+
+    public List<Item> itemsEnElBaul= new List<Item>();
     
     
     public void AgregarItem(Item item)
@@ -38,6 +40,18 @@ public class Inventario : MonoBehaviour
         GameObject itemsParent = transform.Find("ItemsParent").gameObject;
         itemsParent.SetActive(true);
         ActualizarSlot(item);
+    }
+
+    public void QuitarItemDelBaul(Item item)
+    {
+        this.itemsEnElBaul.Remove(item);
+    
+    }
+    public void AgregarItemDelBaul(Item item)
+    {
+        this.QuitarItem(item);
+        this.itemsEnElBaul.Add(item);
+        ActualizarSlot(null);
     }
 
     public void InteraccionBoton(){
@@ -72,6 +86,7 @@ public class Inventario : MonoBehaviour
 
     public void QuitarItem(Item item) {
         this.items.Remove(item);
+        
     }
 
 }
