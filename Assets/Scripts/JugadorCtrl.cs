@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -19,10 +20,13 @@ public class JugadorCtrl : MonoBehaviour {
 	public static JugadorCtrl jugador;
 
 
-	private Inventario inventario;
+    private Inventario inventario;
 	private AdministradorDeMisiones administradorDeMisiones;
 
 	public int oro = 0;
+
+	public int salud = 50;
+	public int hambre = 75;
 
 	public Item pollo;
 
@@ -36,10 +40,20 @@ public class JugadorCtrl : MonoBehaviour {
 		}
 	}
 
-	// Use this for initialization
-	void Start () {
+    public void UsarItem(Item itemPrefab)
+    {
+        if(itemPrefab.consumible){
+			SumarVida(itemPrefab.puntosDeVida);
+			SumarEnergia(itemPrefab.puntosDeHambre);	
+		}
+    }
+
+    // Use this for initialization
+    void Start () {
 		anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
+		salud = 50;
+		hambre = 75;
 		
 		estadoDelJugador = EstadoDelJugador.Jugando;
 		
@@ -67,10 +81,26 @@ public class JugadorCtrl : MonoBehaviour {
 
 	void FixedUpdate(){
 		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
-		/* if(Inventario.instance.TieneElItem(pollo)){
-		print("TENGO EL MALDITO POLLO");
+		
 
-		} */
+		if(Input.GetKeyDown(KeyCode.Alpha1)){
+			Inventario.instance.UsarItemEnLaPosicion(1);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha2)){
+			Inventario.instance.UsarItemEnLaPosicion(2);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha3)){
+			Inventario.instance.UsarItemEnLaPosicion(3);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha4)){
+			Inventario.instance.UsarItemEnLaPosicion(4);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha5)){
+			Inventario.instance.UsarItemEnLaPosicion(5);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha6)){
+			Inventario.instance.UsarItemEnLaPosicion(6);
+		}
 	}
 
 	public void IniciarConversacion(){
@@ -103,6 +133,34 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public void AdquirirItem(Item item){
 		Inventario.instance.AgregarItem(item);
+	}
+
+	public int GetVida(){
+		return salud;
+	}
+
+	public int GetEnergia()
+    {
+        return hambre;
+    }
+
+	public void RestarEnergia(int energiaARestar){
+		this.hambre -= energiaARestar;
+		GameObject.FindGameObjectWithTag("BarraDeEnergia").GetComponent<EnergiaCtrl>().ActualizarEnergia();
+	}
+	public void SumarEnergia(int energiaASumar){
+		this.hambre += energiaASumar;
+		GameObject.FindGameObjectWithTag("BarraDeEnergia").GetComponent<EnergiaCtrl>().ActualizarEnergia();
+	}
+
+	public void RestarVida(int vidaARestar){
+		this.salud -= vidaARestar;
+		GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<VidaCtrl>().ActualizarVida();
+	}
+
+	public void SumarVida(int vidaASumar){
+		this.salud += vidaASumar;
+		GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<VidaCtrl>().ActualizarVida();
 	}
 	
 }

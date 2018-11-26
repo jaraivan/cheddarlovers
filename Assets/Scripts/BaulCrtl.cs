@@ -20,7 +20,9 @@ public class BaulCrtl : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		mantenerAbierto = GetComponent<Animator>();
 		cerrarBaul = GetComponent<Animator>();
-		baulUI.SetActive(false);
+		GameObject.FindGameObjectWithTag("ParentBaulUI").SetActive(false);
+		
+		//baulUI.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -50,14 +52,69 @@ void OnTriggerExit2D(Collider2D col){
              cerrarBaul.SetBool("cerrarBaul", true);
 			 mantenerAbierto.SetBool("mantenerbaulAbierto", false);
 			 anim.SetBool("apretaronParaAbrir", false);
-			 baulUI.SetActive(false);
+			 GameObject.FindGameObjectWithTag("baulUI").transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.SetActive(false);
+			 
 		}
 }
 
 	void AbrirBaul() {
 		anim.SetBool("apretaronParaAbrir", true);
 		cerrarBaul.SetBool("cerrarBaul", false);
-		baulUI.SetActive(true);
+
+		GameObject.FindGameObjectWithTag("baulUI").transform.Find("Canvas").gameObject.transform.Find("RawImage").gameObject.SetActive(true);
+		VaciarTodosLosSlotsEnUI();
+		ActualizarTodosLosSlotsDelBaul();
+		//baulUI.SetActive(true);
 	}
 
+	public void AgregarItemAlBaul(Item item){
+		if(anim.GetBool("mantenerbaulAbierto")){
+			if(item != null){
+			Inventario.instance.AgregarItemDelBaul(item);
+			ActualizarSlotsBaul(item);
+			
+			}
+		}
+	}
+
+	public void ActualizarSlotsBaul(Item item){
+		List<BaulSlotCtrl> hijos = new List<BaulSlotCtrl>();
+
+		GameObject parentBaulUI = GameObject.FindGameObjectWithTag("ParentBaulUI");
+
+		parentBaulUI.GetComponentsInChildren(true,hijos);
+
+        BaulSlotCtrl slotBaulVacio = BuscarSlotVacio(hijos);
+        slotBaulVacio.AdquirirItem(item);
+	}
+
+	public BaulSlotCtrl BuscarSlotVacio(List<BaulSlotCtrl> hijos ){
+		foreach(BaulSlotCtrl s in hijos){
+           if(s.EstaVacio()){
+               return s;
+           }
+        }
+        throw new BaulLlenoException();
+	}
+
+	public void ActualizarTodosLosSlotsDelBaul(){
+		
+		foreach(Item item in Inventario.instance.GetItemsEnBaul()){
+			ActualizarSlotsBaul(item);
+		}
+	}
+
+	public void VaciarTodosLosSlotsEnUI(){
+
+		List<BaulSlotCtrl> hijos = new List<BaulSlotCtrl>();
+
+		GameObject parentBaulUI = GameObject.FindGameObjectWithTag("ParentBaulUI");
+		parentBaulUI.GetComponentsInChildren(true,hijos);
+		foreach (BaulSlotCtrl slot in hijos)
+		{
+		slot.AdquirirItem(null);
+		}
+	}
 }
+
+

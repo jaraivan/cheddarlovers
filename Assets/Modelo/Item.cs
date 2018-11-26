@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,4 +14,7 @@ public bool comprable = false;
 public string descripcion = "nuevaDescripcion";
 public int precio = 0;
 
+public int puntosDeHambre = 0;
+
+public int puntosDeVida = 0;
 }

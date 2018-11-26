@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,19 +22,36 @@ public class Inventario : MonoBehaviour
     }
     #endregion
     public int espacio = 6;
-    public List<Item> items = new List<Item>();
+    public List<Item> items = new List<Item>(6);
+
+    public List<Item> itemsEnElBaul= new List<Item>();
     
     
     public void AgregarItem(Item item)
     {
-       /*  if(items.Count >= espacio){
-            Debug.Log("No tenes espacio en el inventario");
-            return;
-        } */
+        //print(items.Count);
+        //print(items.Count <= items.Capacity);
+        if(items.Count >= items.Capacity){
+        Debug.Log("No tenes espacio en el inventario");
+        throw new InventarioLlenoException();
+        } 
+        
         this.items.Add(item);
         GameObject itemsParent = transform.Find("ItemsParent").gameObject;
         itemsParent.SetActive(true);
         ActualizarSlot(item);
+    }
+
+    public void QuitarItemDelBaul(Item item)
+    {
+        this.itemsEnElBaul.Remove(item);
+    
+    }
+    public void AgregarItemDelBaul(Item item)
+    {
+        this.QuitarItem(item);
+        this.itemsEnElBaul.Add(item);
+        ActualizarSlot(null);
     }
 
     public void InteraccionBoton(){
@@ -44,9 +62,21 @@ public class Inventario : MonoBehaviour
     public void ActualizarSlot(Item item) {
         List<SlotCtrl> hijos = new List<SlotCtrl>();
 	
-	 transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
-     
-        hijos[0].AdquirirItem(item);
+	    transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
+
+        SlotCtrl slotVacio = BuscarSlotVacio(hijos);
+        slotVacio.AdquirirItem(item);
+    }
+
+    private SlotCtrl BuscarSlotVacio(List<SlotCtrl> hijos)
+    {
+        foreach(SlotCtrl s in hijos){
+           if(s.EstaVacio()){
+               return s;
+           }
+        }
+        throw new InventarioLlenoException();
+
     }
 
     public bool TieneElItem(Item item){
@@ -56,6 +86,25 @@ public class Inventario : MonoBehaviour
 
     public void QuitarItem(Item item) {
         this.items.Remove(item);
+        
+    }
+
+    public List<Item> GetItemsEnBaul(){
+        return this.itemsEnElBaul;
+    }
+
+    public void UsarItemEnLaPosicion(int unaPosicion){
+        List<SlotCtrl> hijos = new List<SlotCtrl>();
+	
+	    transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
+
+        SlotCtrl slot = hijos[unaPosicion -1];
+        if(slot.itemPrefab != null && slot.itemPrefab.consumible){
+            GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().UsarItem(slot.itemPrefab);
+            QuitarItem(slot.itemPrefab);
+            slot.itemPrefab = null;
+            slot.ActualizarImagen(null);
+        }
     }
 
 }
