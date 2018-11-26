@@ -38,9 +38,11 @@ public class DoniaPaulinaCtlr : MonoBehaviour
         
         if(this.MeHablaElJugadorEnEstadoJugando(col)){
             this.ComportamientoJugando(col);
+            return;
         }
         if(this.MeHablaElJugadorEnEstadoConversando(col)){
         this.ComportamientoConversando(col);
+        return;
         }
 
         
@@ -125,7 +127,7 @@ public class DoniaPaulinaCtlr : MonoBehaviour
         col.gameObject.GetComponent<JugadorCtrl>().IniciarConversacion();
         ActivarConversacionNPC();
         conversacion.GetComponentInChildren<Text>().text = this.dialogoActual.lineasDeTexto[leyendoLinea];
-        //leyendoLinea++;
+        leyendoLinea++;
         //ComportamientoConversando2(col);
         
     }
@@ -134,7 +136,7 @@ public class DoniaPaulinaCtlr : MonoBehaviour
     void ComportamientoConversando(Collider2D col)
     {
         
-        if (this.leyendoLinea == this.dialogoActual.lineasDeTexto.Count){
+        if (this.leyendoLinea >= this.dialogoActual.lineasDeTexto.Count-1){
             this.DesactivarConversacion(this.misionActual);
         }
         else{

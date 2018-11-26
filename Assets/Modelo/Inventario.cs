@@ -93,4 +93,18 @@ public class Inventario : MonoBehaviour
         return this.itemsEnElBaul;
     }
 
+    public void UsarItemEnLaPosicion(int unaPosicion){
+        List<SlotCtrl> hijos = new List<SlotCtrl>();
+	
+	    transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
+
+        SlotCtrl slot = hijos[unaPosicion -1];
+        if(slot.itemPrefab != null && slot.itemPrefab.consumible){
+            GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().UsarItem(slot.itemPrefab);
+            QuitarItem(slot.itemPrefab);
+            slot.itemPrefab = null;
+            slot.ActualizarImagen(null);
+        }
+    }
+
 }

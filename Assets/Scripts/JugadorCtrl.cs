@@ -81,10 +81,26 @@ public class JugadorCtrl : MonoBehaviour {
 
 	void FixedUpdate(){
 		rb2d.MovePosition(rb2d.position + mov * speed * Time.deltaTime);
-		/* if(Inventario.instance.TieneElItem(pollo)){
-		print("TENGO EL MALDITO POLLO");
+		
 
-		} */
+		if(Input.GetKeyDown(KeyCode.Alpha1)){
+			Inventario.instance.UsarItemEnLaPosicion(1);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha2)){
+			Inventario.instance.UsarItemEnLaPosicion(2);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha3)){
+			Inventario.instance.UsarItemEnLaPosicion(3);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha4)){
+			Inventario.instance.UsarItemEnLaPosicion(4);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha5)){
+			Inventario.instance.UsarItemEnLaPosicion(5);
+		}
+		if(Input.GetKeyDown(KeyCode.Alpha6)){
+			Inventario.instance.UsarItemEnLaPosicion(6);
+		}
 	}
 
 	public void IniciarConversacion(){
