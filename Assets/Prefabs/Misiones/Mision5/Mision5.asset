@@ -24,4 +24,4 @@ MonoBehaviour:
   precompensa: {fileID: 0}
   precompensaOro: 50000
   proxMision: {fileID: 11400000, guid: 6e86c669d05c4cd498fa1dd41fa8dbe5, type: 2}
-  descripcion: Llevale el regalo a Garax
+  descripcion: Junta el dinero para devolverle a Garax

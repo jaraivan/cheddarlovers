@@ -1306,11 +1306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoDeSuavizado: 1
-  maxSpeed: 4
-  distanciaConElJugador: 1
+  maxSpeed: 50
+  distanciaConElJugador: 0.5
   target: {x: 0, y: 0, z: 0}
   mov: {x: 0, y: 0}
-  speed: 3
 --- !u!50 &385641292
 Rigidbody2D:
   serializedVersion: 4

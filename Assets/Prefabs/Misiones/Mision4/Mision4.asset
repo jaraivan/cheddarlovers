@@ -24,4 +24,4 @@ MonoBehaviour:
   precompensa: {fileID: 11400000, guid: 0d5bcb717b000074caeb083f4e163282, type: 2}
   precompensaOro: 200
   proxMision: {fileID: 11400000, guid: b6bb6e9c09f0397499b7e350f85c21e3, type: 2}
-  descripcion: 
+  descripcion: Llevale el regalo a Garax Al Norte del pueblo
