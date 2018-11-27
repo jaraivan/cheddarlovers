@@ -3,34 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DoniaPaulinaCtlr : MonoBehaviour
+public class NpcCtrl : MonoBehaviour
 {
+    public string nombreNpc;
     private GameObject conversacion;
-    //private Queue<string> conversacionActual;
     public Dialogo dialogoActual;
     public Dialogo dialogoSinMision;
     public Dialogo dialogoSinCondicion;
     public int leyendoLinea = 0;
- 
     public Mision misionActual ;
     public Item pollo;
 
     // Use this for initialization
-
     void Awake(){
         conversacion = GameObject.FindGameObjectWithTag("UI").transform.Find("Conversacion").gameObject;
 
-    }
-    void Start()
-    {
-        //conversacionActual = new Queue<string>();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -46,29 +33,9 @@ public class DoniaPaulinaCtlr : MonoBehaviour
             this.ComportamientoConversando(col);
             return;
             }
-
         }
-
-        
     }
 
-/*      void OnTriggerEnter2D(Collider2D col)
-    {
-
-        if(Input.GetKeyDown(KeyCode.Space)){
-            if(this.MeHablaElJugadorEnEstadoJugando(col)){
-                this.ComportamientoJugando(col);
-                return;
-            }
-
-            if(this.MeHablaElJugadorEnEstadoConversando(col)){
-            this.ComportamientoConversando(col);
-            return;
-            }
-
-        }
-    
-    } */
 
     void OnTriggerExit2D(Collider2D col){
         this.DesactivarConversacion(null);
@@ -76,34 +43,29 @@ public class DoniaPaulinaCtlr : MonoBehaviour
     void ActivarConversacionNPC()
     {
         conversacion.SetActive(true);
-        this.misionActual = AdministradorDeMisiones.instance.GetMisionParaMi("DoniaPaulina");
+        this.misionActual = AdministradorDeMisiones.instance.GetMisionParaMi(this.nombreNpc);
         
         if (this.misionActual == null)
         {
             this.dialogoActual = dialogoSinMision;
-            //conversacion.GetComponentInChildren<Text>().text = "No tengo misiones para ti";
 
         }
         else
         {
             if(this.misionActual.estadoDeMision == EstadoDeMision.Disponible){
-            //this.conversacionActual = CopiarConversacion2(this.misionActual.GetDialogoInicio().GetLineasDeTexto2());
             this.dialogoActual = misionActual.dialogoInicio;
             }else{
 
-            if(this.misionActual.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(misionActual)){
-            //this.conversacionActual = CopiarConversacion2(this.misionActual.GetDialogoFin().GetLineasDeTexto2());
-            this.dialogoActual = misionActual.dialogoFin;
-            }
+                if(this.misionActual.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(misionActual)){
+                this.dialogoActual = misionActual.dialogoFin;
+                return;
+                }
 
-            if(this.misionActual.estadoDeMision == EstadoDeMision.Activa  && !this.CumpleCondicionDeMision(misionActual)){
-                //conversacion.GetComponentInChildren<Text>().text = "No tenes lo que te pido";
-                this.dialogoActual = dialogoSinCondicion;
+                if(this.misionActual.estadoDeMision == EstadoDeMision.Activa  && !this.CumpleCondicionDeMision(misionActual)){
+                    this.dialogoActual = dialogoSinCondicion;
+                    return;
+                }
             }
-            }
-
-            
-
 
         }
     }
@@ -121,11 +83,11 @@ public class DoniaPaulinaCtlr : MonoBehaviour
         if (mision != null && mision.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(mision))
         {
             AdministradorDeMisiones.instance.Completar(mision);
-            dialogoActual = dialogoSinMision;
+            dialogoActual = mision.dialogoFin;
+            
         }
         if (mision != null && mision.estadoDeMision == EstadoDeMision.Activa && !this.CumpleCondicionDeMision(mision))
         {
-            //AdministradorDeMisiones.instance.Completar(mision);
             dialogoActual = dialogoSinCondicion;
         }
         conversacion.SetActive(false);
@@ -139,15 +101,12 @@ public class DoniaPaulinaCtlr : MonoBehaviour
         col.gameObject.GetComponent<JugadorCtrl>().IniciarConversacion();
         ActivarConversacionNPC();
         conversacion.GetComponentInChildren<Text>().text = this.dialogoActual.lineasDeTexto[leyendoLinea];
-        leyendoLinea++;
-        //ComportamientoConversando2(col);
-        
+        leyendoLinea++; 
     }
 
 
     void ComportamientoConversando(Collider2D col)
     {
-        
         if (this.leyendoLinea >= this.dialogoActual.lineasDeTexto.Count){
             this.DesactivarConversacion(this.misionActual);
         }
@@ -169,7 +128,9 @@ public class DoniaPaulinaCtlr : MonoBehaviour
     }
 
     bool CumpleCondicionDeMision(Mision mision){
-        
+        if(mision.condicion == null){
+            return true;
+        }
         return Inventario.instance.TieneElItem(mision.condicion);
     }
 

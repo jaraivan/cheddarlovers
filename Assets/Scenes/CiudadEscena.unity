@@ -1771,6 +1771,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b371b552bb938a948b2eb602c7e80ae7, type: 2}
   - {fileID: 11400000, guid: 8a113b8441421cc41970749907c7cc17, type: 2}
   - {fileID: 11400000, guid: 93c9f236ba2c9b8499d40852cc6deca0, type: 2}
+  - {fileID: 11400000, guid: b6bb6e9c09f0397499b7e350f85c21e3, type: 2}
 --- !u!1001 &550542113
 Prefab:
   m_ObjectHideFlags: 0
@@ -2652,6 +2653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96b33809439a3b41846f679311e6ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombreNpc: DoniaPaulina
   dialogoActual: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
   dialogoSinMision: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
   dialogoSinCondicion: {fileID: 11400000, guid: 2419551490aaeba4bad125a424456524,
@@ -4586,7 +4588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1732464280
 RectTransform:
   m_ObjectHideFlags: 0

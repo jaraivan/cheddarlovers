@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96b33809439a3b41846f679311e6ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nombreNpc: Clara
   dialogoActual: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
   dialogoSinMision: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
   dialogoSinCondicion: {fileID: 11400000, guid: 2419551490aaeba4bad125a424456524,
@@ -201,7 +202,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 26e740e7ffcbb6a4f9e9dc883985d679, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 370a5f8ce6156fe4a96d54a76ead4745, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -224,18 +225,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023771286, y: -0.35531354}
+  m_Offset: {x: -0.6864252, y: -0.20204657}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.84375, y: 1.21875}
+    oldSize: {x: 0.84375, y: 0.90625}
     newSize: {x: 0.71875, y: 1.34375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2328415, y: 0.72358847}
+  m_Size: {x: 1.0795746, y: 1.4809078}
   m_EdgeRadius: 0
 --- !u!50 &31712462
 Rigidbody2D:
@@ -264,7 +265,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 31712457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.57, y: -1.76, z: 0}
+  m_LocalPosition: {x: 9.741, y: -1.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
