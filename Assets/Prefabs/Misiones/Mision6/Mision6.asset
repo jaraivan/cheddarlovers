@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
+  m_Name: Mision6
+  m_EditorClassIdentifier: 
+  nombreDeMision: Amigos Generosos
+  propietario: Garax
+  dialogoInicio: {fileID: 11400000, guid: 489b5d89d9a62c642984d2af21470f67, type: 2}
+  dialogoFin: {fileID: 11400000, guid: f3811ef032cc47549aecf349b78c66f9, type: 2}
+  recompensa: {fileID: 0}
+  condicion: {fileID: 0}
+  condicionOro: 0
+  recompensaOro: 0
+  estadoDeMision: 3
+  precompensa: {fileID: 0}
+  precompensaOro: 50000
+  proxMision: {fileID: 11400000, guid: 54dbfbf7cddb57f419cc1eef56e71ff6, type: 2}
+  descripcion: Devuelvele el dinero a Garax

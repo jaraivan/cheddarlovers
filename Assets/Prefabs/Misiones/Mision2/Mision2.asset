@@ -17,8 +17,9 @@ MonoBehaviour:
   dialogoFin: {fileID: 11400000, guid: bc30acda6ee82164faa2a87b8a4f2816, type: 2}
   recompensa: {fileID: 0}
   condicion: {fileID: 11400000, guid: 2766dd17452b54f4c91d56322aa80e27, type: 2}
+  condicionOro: 0
   recompensaOro: 100
-  estadoDeMision: 3
+  estadoDeMision: 1
   precompensa: {fileID: 0}
   precompensaOro: 0
   proxMision: {fileID: 11400000, guid: 8a113b8441421cc41970749907c7cc17, type: 2}

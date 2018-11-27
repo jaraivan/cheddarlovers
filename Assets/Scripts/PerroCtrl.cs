@@ -15,7 +15,6 @@ public class PerroCtrl : MonoBehaviour {
 	public Vector3 target;
 	public Vector2 mov;
 	Animator anim;
-	private Rigidbody2D rb2d;
 	public float speed = 3f;
 
 	// Use this for initialization
@@ -25,7 +24,6 @@ public class PerroCtrl : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		posInicial = new Vector3(jugador.transform.position.x -1f,jugador.transform.position.y,transform.position.z);
 		transform.position = posInicial;
-		rb2d = GetComponent<Rigidbody2D>();
 		target = new Vector3(jugador.transform.position.x -1f,jugador.transform.position.y,transform.position.z);
 	}
 	
@@ -38,36 +36,31 @@ public class PerroCtrl : MonoBehaviour {
 			anim.SetFloat("movY",0);
 			anim.SetBool("caminando",false);
 		}else{
+			float distEnX = Vector2.Distance(new Vector2(transform.position.x,0),new Vector2(target.x,0));
+			float distEnY = Vector2.Distance(new Vector2(0,transform.position.y),new Vector2(0,target.y));
+			
+			if(target.x < transform.position.x){
+				distEnX = -distEnX;
+			}
 
+			if(target.y < transform.position.y){
+				distEnY = -distEnY;
+			}
+			mov = new Vector2(
+				distEnX,
+				distEnY
+			);
+			
+			anim.SetBool("caminando",true);
+			anim.SetFloat("movX",mov.x);
+			anim.SetFloat("movY",mov.y);
 		
-		float distEnX = Vector2.Distance(new Vector2(transform.position.x,0),new Vector2(target.x,0));
-		float distEnY = Vector2.Distance(new Vector2(0,transform.position.y),new Vector2(0,target.y));
-		
-		if(target.x < transform.position.x){
-			distEnX = -distEnX;
-		}
-
-		if(target.y < transform.position.y){
-			distEnY = -distEnY;
-		}
-		mov = new Vector2(
-			distEnX,
-			distEnY
-		);
-		
-		anim.SetBool("caminando",true);
-		anim.SetFloat("movX",mov.x);
-		anim.SetFloat("movY",mov.y);
-		
-
 		}
 		
 	}
 
 	void FixedUpdate(){
 		transform.position  = Vector3.SmoothDamp(transform.position,target, ref velocidad,tiempoDeSuavizado,maxSpeed);
-
-		
 	}
 	
 }

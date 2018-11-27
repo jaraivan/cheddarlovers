@@ -94,5 +94,31 @@ public class AdministradorDeMisiones : MonoBehaviour{
          }
         BuscarYHacerDisponibleMisionEnLaLista(mision.proxMision);
     }
+
+    public void Completar2(Mision mision){
+        BuscarYCompletarMisionEnLaLista(mision);
+        GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().ActualizarListaDeMisiones();
+        
+        if(mision.condicion != null) {
+            Inventario.instance.QuitarElItemPorMision(mision.condicion);
+        }
+        //BuscarYHacerDisponibleMisionEnLaLista(mision.proxMision);
+    }
+
+    public void Entregar(Mision mision){
+        BuscarYEntregarMisionEnLaLista(mision);
+        GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().ActualizarListaDeMisiones();
+        
+        int oroAAgregar = mision.recompensaOro;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
+        Item recompensaItem = mision.recompensa;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(recompensaItem);
+        BuscarYHacerDisponibleMisionEnLaLista(mision.proxMision);
+    }
     
+
+    private void BuscarYEntregarMisionEnLaLista(Mision mision)
+    {
+        misiones2.Find(m=> m.nombreDeMision == mision.nombreDeMision).estadoDeMision = EstadoDeMision.Entregada;
+    }
 }
