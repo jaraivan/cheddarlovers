@@ -19,7 +19,7 @@ public class IntroCrtl : MonoBehaviour {
 	}
 	
  void TerminarIntro(VideoPlayer vp) {
-	SceneManager.LoadScene(2);
+	SceneManager.LoadScene("Intro2");
 }
 	
 }
