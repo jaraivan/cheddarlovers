@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
+  m_Name: Mision3
+  m_EditorClassIdentifier: 
+  nombreDeMision: La sopa a Clara
+  propietario: DoniaPaulina
+  dialogoInicio: {fileID: 11400000, guid: 55cca2c983ca29c4197c37f40837d854, type: 2}
+  dialogoFin: {fileID: 11400000, guid: 2077fcd7d4bae1647ab7f99f7294b454, type: 2}
+  recompensa: {fileID: 0}
+  condicion: {fileID: 0}
+  recompensaOro: 200
+  estadoDeMision: 3
+  precompensa: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
+  precompensaOro: 0
+  proxMision: {fileID: 11400000, guid: 93c9f236ba2c9b8499d40852cc6deca0, type: 2}
+  descripcion: Espera que Donia Paulina termine la sopa

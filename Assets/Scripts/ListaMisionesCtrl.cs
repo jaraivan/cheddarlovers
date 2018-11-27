@@ -12,6 +12,7 @@ public class ListaMisionesCtrl : MonoBehaviour {
 		//misionesDelJugador = GameObject.FindWithTag("Player").GetComponent<JugadorCtrl>().GetMisionesDelJugador();
 
 		misionesEnLaUi = new Queue<Mision>(5);
+		ActualizarListaDeMisiones();
 	}
 	
 	// Update is called once per frame
@@ -37,7 +38,8 @@ public class ListaMisionesCtrl : MonoBehaviour {
 		GameObject misionEnUI = GameObject.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
 
 		misionEnUI.transform.SetParent(verticalLayoutMisiones.transform,false);
-		misionEnUI.GetComponentInChildren<Text>().text = mision.nombreDeMision;
+		misionEnUI.transform.Find("TextoMision").gameObject.GetComponent<Text>().text = mision.nombreDeMision;
+		misionEnUI.transform.Find("TextoDescripcion").gameObject.GetComponent<Text>().text = mision.descripcion;
 
 	}
 
@@ -56,6 +58,8 @@ public class ListaMisionesCtrl : MonoBehaviour {
 		GameObject misionEnUI = GameObject.Instantiate(misionEnListaUI,verticalLayoutMisiones.transform.position,Quaternion.identity);
 		misionEnUI.transform.SetParent(verticalLayoutMisiones.transform,false);
 		misionEnUI.GetComponentInChildren<Text>().text = m.nombreDeMision;
+		misionEnUI.transform.Find("TextoDescripcion").gameObject.GetComponent<Text>().text = m.descripcion;
+
 		}
 	}
 

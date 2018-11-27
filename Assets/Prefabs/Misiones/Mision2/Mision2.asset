@@ -15,10 +15,11 @@ MonoBehaviour:
   propietario: DoniaPaulina
   dialogoInicio: {fileID: 11400000, guid: 404f6b9924e18ae44af9371a4acee74f, type: 2}
   dialogoFin: {fileID: 11400000, guid: bc30acda6ee82164faa2a87b8a4f2816, type: 2}
-  recompensa: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
+  recompensa: {fileID: 0}
   condicion: {fileID: 11400000, guid: 2766dd17452b54f4c91d56322aa80e27, type: 2}
   recompensaOro: 100
   estadoDeMision: 3
   precompensa: {fileID: 0}
   precompensaOro: 0
-  proxMision: {fileID: 0}
+  proxMision: {fileID: 11400000, guid: 8a113b8441421cc41970749907c7cc17, type: 2}
+  descripcion: Ve junto a la iglesia y busca la flor rosa

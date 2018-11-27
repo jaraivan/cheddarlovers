@@ -22,4 +22,6 @@ public class Mision : ScriptableObject  {
 
     public Mision proxMision;
 
+    public string descripcion;
+
 }
