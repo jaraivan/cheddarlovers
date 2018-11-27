@@ -14,6 +14,7 @@ public class Mision : ScriptableObject  {
     public Dialogo dialogoFin;
     public Item recompensa = null;
     public Item condicion = null;
+    public int condicionOro = 0;
     public int recompensaOro = 0;
 
     public EstadoDeMision estadoDeMision;

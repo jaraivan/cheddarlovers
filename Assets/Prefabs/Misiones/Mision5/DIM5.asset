@@ -11,5 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
   m_Name: DIM5
   m_EditorClassIdentifier: 
-  nombreNPC: 
-  lineasDeTexto: []
+  nombreNPC: Garax
+  lineasDeTexto:
+  - 'Lucas: Hola Garax, tanto tiempo!! Como estas?'
+  - 'Garax: Muy bien, si la verdad paso mucho tiempo, queria venir antes cuando me
+    entere del accidente en la mina, pero tenia mucho trabajo y no pude, lo siento
+    mucho.'
+  - 'Lucas: Esta bien, tengo otros problemas ahora, antes de que me olvide, esto te
+    lo manda Clara, ella esta enferma y no podia venir..'

@@ -45,30 +45,30 @@ public class NpcCtrl : MonoBehaviour
         conversacion.SetActive(true);
         this.misionActual = AdministradorDeMisiones.instance.GetMisionParaMi(this.nombreNpc);
         
-        if (this.misionActual == null)
-        {
-            this.dialogoActual = dialogoSinMision;
-
-        }
-        else
-        {
-            if(this.misionActual.estadoDeMision == EstadoDeMision.Disponible){
-            this.dialogoActual = misionActual.dialogoInicio;
-            }else{
-
-                if(this.misionActual.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(misionActual)){
-                this.dialogoActual = misionActual.dialogoFin;
-                return;
-                }
-
-                if(this.misionActual.estadoDeMision == EstadoDeMision.Activa  && !this.CumpleCondicionDeMision(misionActual)){
-                    this.dialogoActual = dialogoSinCondicion;
-                    return;
-                }
-            }
-
-        }
+        this.dialogoActual = GetDialogoCorrespondienteAMisionActual();
+        
     }
+
+    private Dialogo GetDialogoCorrespondienteAMisionActual(){
+        if (this.misionActual == null){
+            return dialogoSinMision;
+        }
+            
+        if(this.misionActual.estadoDeMision == EstadoDeMision.Disponible){
+            return misionActual.dialogoInicio;
+        }
+
+        if(this.misionActual.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(misionActual)){
+            return misionActual.dialogoFin;
+        }
+
+        if(this.misionActual.estadoDeMision == EstadoDeMision.Activa  && !this.CumpleCondicionDeMision(misionActual)){
+            return dialogoSinCondicion;
+        }
+                
+        return dialogoSinMision;    
+    }
+
 
     void DesactivarConversacion(Mision mision)
     {
@@ -78,13 +78,26 @@ public class NpcCtrl : MonoBehaviour
         if (mision != null && mision.estadoDeMision == EstadoDeMision.Disponible)
         {
             AdministradorDeMisiones.instance.ActivarMision(mision);
+            conversacion.SetActive(false);
+            leyendoLinea = 0;
+            return;
             
         }
         if (mision != null && mision.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(mision))
         {
-            AdministradorDeMisiones.instance.Completar(mision);
+            if(!dialogoActual == mision.dialogoFin){
             dialogoActual = mision.dialogoFin;
-            
+            AdministradorDeMisiones.instance.Completar(mision);
+            leyendoLinea = 0;
+            lucas.IniciarConversacion();
+            ComportamientoConversandoFinDeMision();
+
+            }else{
+                AdministradorDeMisiones.instance.Completar(mision);
+                conversacion.SetActive(false);
+            leyendoLinea = 0;
+            }
+            return;
         }
         if (mision != null && mision.estadoDeMision == EstadoDeMision.Activa && !this.CumpleCondicionDeMision(mision))
         {
@@ -109,6 +122,18 @@ public class NpcCtrl : MonoBehaviour
     {
         if (this.leyendoLinea >= this.dialogoActual.lineasDeTexto.Count){
             this.DesactivarConversacion(this.misionActual);
+        }
+        else{
+            conversacion.GetComponentInChildren<Text>().text = this.dialogoActual.lineasDeTexto[leyendoLinea];
+            leyendoLinea++;
+        }
+        
+    }
+
+     void ComportamientoConversandoFinDeMision()
+    {
+        if (this.leyendoLinea >= this.dialogoActual.lineasDeTexto.Count){
+            conversacion.SetActive(false);
         }
         else{
             conversacion.GetComponentInChildren<Text>().text = this.dialogoActual.lineasDeTexto[leyendoLinea];

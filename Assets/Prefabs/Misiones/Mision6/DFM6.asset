@@ -9,11 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
-  m_Name: DIM4
+  m_Name: DFM6
   m_EditorClassIdentifier: 
-  nombreNPC: Clara
-  lineasDeTexto:
-  - "Clara: Hola Lucas, que haces aqu\xED?"
-  - "Lucas: Tu abuela me pidi\xF3 que te trajera esto, disculpa que entr\xE9 as\xED,
-    la verdad es que ella me dijo que estabas aqu\xED y como no contestaste la puerta,
-    me preocupe un poco, creo."
+  nombreNPC: 
+  lineasDeTexto: []

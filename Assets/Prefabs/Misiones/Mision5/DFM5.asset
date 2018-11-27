@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
   m_Name: DFM5
   m_EditorClassIdentifier: 
-  nombreNPC: 
-  lineasDeTexto: []
+  nombreNPC: Garax
+  lineasDeTexto:
+  - 'Garax: Genial, despues pasare a saludarla. '

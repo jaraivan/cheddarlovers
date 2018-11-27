@@ -15,9 +15,10 @@ MonoBehaviour:
   propietario: Clara
   dialogoInicio: {fileID: 11400000, guid: 966ccbf030354b847b3597e65d5b6c48, type: 2}
   dialogoFin: {fileID: 11400000, guid: 0606ac08252f2744ab6e30e68a477bd1, type: 2}
-  recompensa: {fileID: 0}
+  recompensa: {fileID: 11400000, guid: 0d5bcb717b000074caeb083f4e163282, type: 2}
   condicion: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
-  recompensaOro: 0
+  condicionOro: 0
+  recompensaOro: 200
   estadoDeMision: 3
   precompensa: {fileID: 0}
   precompensaOro: 0
