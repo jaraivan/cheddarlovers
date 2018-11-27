@@ -36,28 +36,39 @@ public class DoniaPaulinaCtlr : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         
-        if(this.MeHablaElJugadorEnEstadoJugando(col)){
-            this.ComportamientoJugando(col);
+        if(Input.GetKeyDown(KeyCode.Space)){
+            if(this.MeHablaElJugadorEnEstadoJugando(col)){
+                this.ComportamientoJugando(col);
+                return;
+            }
+
+            if(this.MeHablaElJugadorEnEstadoConversando(col)){
+            this.ComportamientoConversando(col);
             return;
-        }
-        if(this.MeHablaElJugadorEnEstadoConversando(col)){
-        this.ComportamientoConversando(col);
-        return;
+            }
+
         }
 
         
     }
 
-     void OnTriggerEnter2D(Collider2D col)
+/*      void OnTriggerEnter2D(Collider2D col)
     {
-        if(this.MeHablaElJugadorEnEstadoJugando(col)){
-            this.ComportamientoJugando(col);
-        }
-        if(this.MeHablaElJugadorEnEstadoConversando(col)){
-        this.ComportamientoConversando(col);
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            if(this.MeHablaElJugadorEnEstadoJugando(col)){
+                this.ComportamientoJugando(col);
+                return;
+            }
+
+            if(this.MeHablaElJugadorEnEstadoConversando(col)){
+            this.ComportamientoConversando(col);
+            return;
+            }
+
         }
     
-    }
+    } */
 
     void OnTriggerExit2D(Collider2D col){
         this.DesactivarConversacion(null);
@@ -105,6 +116,7 @@ public class DoniaPaulinaCtlr : MonoBehaviour
         if (mision != null && mision.estadoDeMision == EstadoDeMision.Disponible)
         {
             AdministradorDeMisiones.instance.ActivarMision(mision);
+            
         }
         if (mision != null && mision.estadoDeMision == EstadoDeMision.Activa && this.CumpleCondicionDeMision(mision))
         {
@@ -136,7 +148,7 @@ public class DoniaPaulinaCtlr : MonoBehaviour
     void ComportamientoConversando(Collider2D col)
     {
         
-        if (this.leyendoLinea >= this.dialogoActual.lineasDeTexto.Count-1){
+        if (this.leyendoLinea >= this.dialogoActual.lineasDeTexto.Count){
             this.DesactivarConversacion(this.misionActual);
         }
         else{
@@ -148,13 +160,12 @@ public class DoniaPaulinaCtlr : MonoBehaviour
 
     bool MeHablaElJugadorEnEstadoJugando(Collider2D col){
         return (col.gameObject.tag == "Player"
-        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Jugando && (Input.GetKeyDown(KeyCode.Space)));
+        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Jugando );
     }
 
     bool MeHablaElJugadorEnEstadoConversando(Collider2D col){
         return (col.gameObject.tag == "Player"
-        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando
-        && (Input.GetKeyDown(KeyCode.Space)));
+        && col.gameObject.GetComponent<JugadorCtrl>().GetEstadoDelJugador() == EstadoDelJugador.Conversando);
     }
 
     bool CumpleCondicionDeMision(Mision mision){

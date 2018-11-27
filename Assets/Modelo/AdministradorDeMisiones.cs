@@ -61,6 +61,9 @@ public class AdministradorDeMisiones : MonoBehaviour{
         GameObject.FindGameObjectWithTag("UI").transform.Find("ListaMisiones").gameObject.GetComponent<ListaMisionesCtrl>().ActualizarListaDeMisiones();
         int oroAAgregar = mision.precompensaOro;
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
+        if(mision.precompensa !=null){
+           GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(mision.precompensa); 
+        }
     }
 
     private void BuscarYActivarMisionEnLaLista(Mision mision)
