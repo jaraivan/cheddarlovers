@@ -160,9 +160,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreNpc: Clara
-  dialogoActual: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
-  dialogoSinMision: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
-  dialogoSinCondicion: {fileID: 11400000, guid: 2419551490aaeba4bad125a424456524,
+  dialogoActual: {fileID: 11400000, guid: 0a817892687d33d4ea3c79ea70d2045d, type: 2}
+  dialogoSinMision: {fileID: 11400000, guid: 0a817892687d33d4ea3c79ea70d2045d, type: 2}
+  dialogoSinCondicion: {fileID: 11400000, guid: 515524fd3c6b8fd46a85bd103fbe52ac,
     type: 2}
   leyendoLinea: 0
   misionActual: {fileID: 0}

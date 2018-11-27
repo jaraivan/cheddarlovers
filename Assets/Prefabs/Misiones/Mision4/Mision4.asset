@@ -11,16 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
   m_Name: Mision4
   m_EditorClassIdentifier: 
-  nombreDeMision: Ayudando a Clara
+  nombreDeMision: Regalo para Garax
   propietario: Clara
+  destinatario: Garax
   dialogoInicio: {fileID: 11400000, guid: 966ccbf030354b847b3597e65d5b6c48, type: 2}
   dialogoFin: {fileID: 11400000, guid: 0606ac08252f2744ab6e30e68a477bd1, type: 2}
-  recompensa: {fileID: 11400000, guid: 0d5bcb717b000074caeb083f4e163282, type: 2}
-  condicion: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
+  recompensa: {fileID: 0}
+  condicion: {fileID: 11400000, guid: 0d5bcb717b000074caeb083f4e163282, type: 2}
   condicionOro: 0
-  recompensaOro: 200
+  recompensaOro: 0
   estadoDeMision: 3
-  precompensa: {fileID: 0}
-  precompensaOro: 0
+  precompensa: {fileID: 11400000, guid: 0d5bcb717b000074caeb083f4e163282, type: 2}
+  precompensaOro: 200
   proxMision: {fileID: 11400000, guid: b6bb6e9c09f0397499b7e350f85c21e3, type: 2}
   descripcion: 

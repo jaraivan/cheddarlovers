@@ -10,6 +10,7 @@ public class Mision : ScriptableObject  {
     public string nombreDeMision;
 
     public string propietario;
+    public string destinatario;
     public Dialogo dialogoInicio;
     public Dialogo dialogoFin;
     public Item recompensa = null;
