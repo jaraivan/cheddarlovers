@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Name: MisionPrincipal
   m_EditorClassIdentifier: 
   nombreDeMision: Deudas Heredadas
-  propietario: ElUniverso
-  dialogoInicio: {fileID: 0}
-  dialogoFin: {fileID: 0}
+  propietario: Fabian
+  destinatario: Fabian
+  dialogoInicio: {fileID: 11400000, guid: d021cf8dfe972f24ab9692e0bae514d7, type: 2}
+  dialogoFin: {fileID: 11400000, guid: bde3b257525a8a34986a03b6a0a1d80d, type: 2}
   recompensa: {fileID: 0}
   condicion: {fileID: 0}
+  condicionOro: 0
   recompensaOro: 0
   estadoDeMision: 0
   precompensa: {fileID: 0}

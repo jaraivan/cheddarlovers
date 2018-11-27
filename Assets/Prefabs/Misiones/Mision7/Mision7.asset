@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Name: Mision7
   m_EditorClassIdentifier: 
   nombreDeMision: Mision7
-  propietario: Nose
+  propietario: Luis
+  destinatario: Luis
   dialogoInicio: {fileID: 11400000, guid: 1e9ef1537f99bf84aba519eadd380325, type: 2}
   dialogoFin: {fileID: 11400000, guid: 42790bf9749a2554d81c353138c7c0c4, type: 2}
   recompensa: {fileID: 0}

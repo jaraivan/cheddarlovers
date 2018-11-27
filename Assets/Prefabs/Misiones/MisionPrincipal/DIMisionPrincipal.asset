@@ -9,12 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
-  m_Name: DFM6
+  m_Name: DIMisionPrincipal
   m_EditorClassIdentifier: 
-  nombreNPC: Pescador
+  nombreNPC: Fabian
   lineasDeTexto:
-  - 'Lucas: Me mando el loco Pablo'
-  - 'Pescador: Que dijo esta vez?'
-  - 'Lucas: Dijo que la explosion en la mina es una mentira... Es verdad?'
-  - 'Pescador: Yo no voy a hablar de eso, pero te puedo decir como llegar'
-  - 'Pescador: Pero primero resuelte este acertijo, solo por diversion.'
+  - Fabian:Veo que tienes agallas chico

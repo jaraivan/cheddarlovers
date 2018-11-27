@@ -11,18 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
   m_Name: DIM6
   m_EditorClassIdentifier: 
-  nombreNPC: Garax
+  nombreNPC: ElLocoPablo
   lineasDeTexto:
-  - 'Garax: Que problemas tienes?'
-  - 'Lucas: Debo mucha plata, y amenazaron con matarme, estoy desesperado.'
-  - 'Garax: Uy amigo que terrible!! Yo puedo prestarte lo que necesites, eramos mejores
-    amigos, la distancia no cambio eso, por lo menos de mi parte.'
-  - 'Lucas: De verdad?? Muchas gracias Garax, me salvas la vida literalmente, pero
-    no se cuando te lo podre devolver.'
-  - 'Garax: No es para tanto, solo me tenes que firmar un contrato, pura formalidad
-    para mis abogados y ya esta.'
-  - 'Lucas: No hay problema, te lo agradezco infinitamente, cuando Clara mejore nos
-    juntamos a brindar por los viejos tiempos.'
-  - 'Garax: Por supuesto.'
-  - 'Lucas: Ahora me voy a pagar mi deuda y juntar para devolverte lo que me prestaste,
-    hasta luego!'
+  - 'El loco Pablo: No creas lo que dicen!'
+  - 'Lucas: De que hablas?'
+  - 'El loco Pablo: No creas lo que dicen! Sobre el accidente en la mina!'
+  - 'Lucas: Que dices?'
+  - 'El loco Pablo: No creas lo que dicen! Sobre el accidente en la mina! JODER!'
+  - 'Lucas: Y que sucedio realmente?'
+  - "El loco Pablo: Yo lo vi, yo lo vi todo, no hubo ninguna explosi\xF3n!"
+  - Lucas:Que dices mi padre estaba ahi?!
+  - 'El loco Pablo: No puedo contarte mas, siempre nos estan espiando, esos malditos
+    comunistas!'
+  - 'Lucas: Comunistas?'
+  - 'El loco Pablo: Comunistas? Yo nunca dije comunistas, ve con el pescador, el no
+    es parte de todo el complot contra nosotros.'
