@@ -13,7 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreNPC: Clara
   lineasDeTexto:
-  - "Clara: Hola Lucas, que haces aqu\xED?"
-  - "Lucas: Tu abuela me pidi\xF3 que te trajera esto, disculpa que entr\xE9 as\xED,
-    la verdad es que ella me dijo que estabas aqu\xED y como no contestaste la puerta,
-    me preocupe un poco, creo."
+  - 'Lucas: Como te sientes?.'
+  - 'Clara: Mal, hace dias que estoy con fiebre y sin energia.'
+  - 'Lucas: Espero que te recuperes pronto.'
+  - "Clara: Ya que est\xE1s aqu\xED puedo pedirte un favor?."
+  - 'Lucas: Por supuesto.'
+  - 'Clara: Te acuerdas de Garax? Nuestro amigo de la infancia? Volvio al pueblo,
+    y queria llevarle un regalo de bienvenida pero no voy a poder. '
+  - 'Lucas: Yo me encargo.'
+  - 'Clara: Garax vive cruzando el bosque, al norte del pueblo.'
+  - 'Lucas: Genial, nos vemos pronto.'

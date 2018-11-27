@@ -14,14 +14,11 @@ MonoBehaviour:
   nombreNPC: DoniaPaulina
   lineasDeTexto:
   - "Lucas: Hola Do\xF1a Paulina"
-  - "DoniaPaulina: Hola Lucas, te veo preocupado peque\xF1o, \xBFQu\xE9 ha pasado?"
-  - "Lucas: Me acabo de enterar que mi padre ten\xEDa deudas, y me van sacar la casa
-    si no les doy el dinero que quieren\u2026 Desde el accidente en la mina, no he
-    conseguido trabajo, no se que voy a hacer!"
-  - "DoniaPaulina: Oh no que terrible! Me encantar\xEDa poder ayudarte, pero ahora
-    mismo, no se me ocurre como\u2026"
-  - "DoniaPaulina: Un momento, si haces algunos mandados para mi, podr\xEDa darte
-    unas monedas, no es mucho, pero por algo se empieza no?"
+  - "Do\xF1a Paulina: Hola Lucas, te veo preocupado peque\xF1o, \xBFQu\xE9 ha pasado?"
+  - "Lucas: Me acabo de enterar que mi padre ten\xEDa deudas, desde el accidente en
+    la mina, no he conseguido trabajo, no se que voy a hacer!"
+  - "Do\xF1a Paulina:  Si haces algunos mandados para mi, podr\xEDa darte unas monedas,
+    no es mucho, pero por algo se empieza no?"
   - 'Lucas: Gracias! Dime que tengo que hacer'
-  - "DoniaPaulina: Ando necesitando algunas cosas del mercado, puedes ir a comprarlos
-    y traerlos? Aqu\xED tienes la lista de lo que necesito y el oro para eso\u2026"
+  - "Do\xF1a Paulina: Necesito que me traigas un pollo del mercado, aqu\xED tienes
+    las monedas."

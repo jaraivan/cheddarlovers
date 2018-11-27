@@ -13,14 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreNPC: Clara
   lineasDeTexto:
-  - 'Clara: Me asustaste! pero no importa, gracias por la sopa!'
-  - 'Lucas: De nada, como te sientes?.'
-  - 'Clara: Mal, hace dias que estoy con fiebre y sin energia.'
-  - 'Lucas: Espero que te recuperes pronto.'
-  - "Clara: Ya que est\xE1s aqu\xED puedo pedirte un favor?."
-  - 'Lucas: Por supuesto.'
-  - 'Clara: Te acuerdas de Garax? Nuestro amigo de la infancia? Volvio al pueblo,
-    y queria llevarle un regalo de bienvenida pero no voy a poder.'
-  - 'Lucas: Yo me encargo.'
-  - 'Clara: Garax vive cruzando el bosque, al norte del pueblo.'
-  - 'Lucas: Genial, nos vemos pronto.'
+  - 'Lucas: Hola Garax, tanto tiempo!! Como estas?'
+  - 'Garax: Muy bien, si la verdad paso mucho tiempo, queria venir antes cuando me
+    entere del accidente en la mina, pero tenia mucho trabajo y no pude, lo siento
+    mucho.'
+  - 'Lucas: Esta bien, tengo otros problemas ahora, antes de que me olvide, esto te
+    lo manda Clara, ella esta enferma y no podia venir..'
+  - 'Garax: Genial, despues pasare a saludarla. '

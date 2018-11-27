@@ -153,10 +153,19 @@ public class NpcCtrl : MonoBehaviour
     }
 
     bool CumpleCondicionDeMision(Mision mision){
-        if(mision.condicion == null){
-            return true;
-        }
+        return CumpleSoyElDestinario(mision) && CumpleTengoElItemPedido(mision) && CumpleTengoElOroPedido(mision);
+    }
+
+    bool CumpleSoyElDestinario(Mision mision){
+        return  mision.destinatario == this.nombreNpc;
+    }
+
+    bool CumpleTengoElItemPedido(Mision mision){
         return Inventario.instance.TieneElItem(mision.condicion);
+    }
+
+    bool CumpleTengoElOroPedido(Mision mision){
+        return GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().GetOro() >= mision.condicionOro;
     }
 
 }

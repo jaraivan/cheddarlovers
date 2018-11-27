@@ -11,16 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
   m_Name: Mision3
   m_EditorClassIdentifier: 
-  nombreDeMision: La sopa a Clara
+  nombreDeMision: Llevarle la sopa a Clara
   propietario: DoniaPaulina
+  destinatario: Clara
   dialogoInicio: {fileID: 11400000, guid: 55cca2c983ca29c4197c37f40837d854, type: 2}
   dialogoFin: {fileID: 11400000, guid: 2077fcd7d4bae1647ab7f99f7294b454, type: 2}
-  recompensa: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
-  condicion: {fileID: 0}
+  recompensa: {fileID: 0}
+  condicion: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
   condicionOro: 0
-  recompensaOro: 200
-  estadoDeMision: 2
-  precompensa: {fileID: 0}
-  precompensaOro: 0
+  recompensaOro: 0
+  estadoDeMision: 3
+  precompensa: {fileID: 11400000, guid: b3a3b56068c785d479fb7be26fe1e7cb, type: 2}
+  precompensaOro: 200
   proxMision: {fileID: 11400000, guid: 93c9f236ba2c9b8499d40852cc6deca0, type: 2}
-  descripcion: Espera que Donia Paulina termine la sopa
+  descripcion: Llevale la sopa a Clara

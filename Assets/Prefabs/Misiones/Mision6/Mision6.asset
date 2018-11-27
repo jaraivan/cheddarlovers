@@ -11,8 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
   m_Name: Mision6
   m_EditorClassIdentifier: 
-  nombreDeMision: Amigos Generosos
+  nombreDeMision: 
   propietario: Garax
+  destinatario: 
   dialogoInicio: {fileID: 11400000, guid: 489b5d89d9a62c642984d2af21470f67, type: 2}
   dialogoFin: {fileID: 11400000, guid: f3811ef032cc47549aecf349b78c66f9, type: 2}
   recompensa: {fileID: 0}

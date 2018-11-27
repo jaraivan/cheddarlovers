@@ -11,7 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
   m_Name: DialogoFinM3
   m_EditorClassIdentifier: 
-  nombreNPC: DoniaPaulina
+  nombreNPC: Clara
   lineasDeTexto:
-  - "Do\xF1a Paulina: Vamos Apurate!"
-  - 'Lucas: Ya mismo voy!'
+  - "Clara: Hola Lucas, que haces aqu\xED?"
+  - "Lucas: Tu abuela me pidi\xF3 que te trajera esto, disculpa que entr\xE9 as\xED,
+    la verdad es que ella me dijo que estabas aqu\xED y como no contestaste la puerta,
+    me preocupe un poco, creo."
+  - 'Clara: Me asustaste! pero no importa, gracias por la sopa!'

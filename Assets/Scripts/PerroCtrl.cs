@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PerroCtrl : MonoBehaviour {
 	
 	private GameObject jugador;
-	public float tiempoDeSuavizado = 0.5f;
+	public float tiempoDeSuavizado = 0.2f ;
 	public float maxSpeed;
 	public float distanciaConElJugador;
 	Vector3 posInicial;
@@ -15,7 +15,7 @@ public class PerroCtrl : MonoBehaviour {
 	public Vector3 target;
 	public Vector2 mov;
 	Animator anim;
-	public float speed = 3f;
+	
 
 	// Use this for initialization
 
@@ -60,7 +60,7 @@ public class PerroCtrl : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		transform.position  = Vector3.SmoothDamp(transform.position,target, ref velocidad,tiempoDeSuavizado,maxSpeed);
+		transform.position  = Vector3.SmoothDamp(transform.position,target, ref velocidad,0.5f,5);
 	}
 	
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreNPC: DoniaPaulina
   lineasDeTexto:
-  - 'Donia Paulina: Gracias, era justo lo que me faltaba para esta sopa especial para
-    Clara'
+  - "Do\xF1a Paulina: Gracias, era justo lo que me faltaba para esta sopa especial
+    para Clara."

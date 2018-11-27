@@ -13,15 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreNPC: DoniaPaulina
   lineasDeTexto:
-  - "Donia Paulina: los a\xF1os pasan y ya no es tan f\xE1cil para mi una cosa tan
+  - "Do\xF1a Paulina: Los a\xF1os pasan y ya no es tan f\xE1cil para mi una cosa tan
     simple como ir al mercado, le hubiese pedido a mi nieta Clara que lo haga, pero
     ella no se siente muy bien."
   - 'Lucas: Que tiene?'
-  - "Donia Paulina: Le agarr\xF3 un resfr\xEDo, nada grave, le har\xE9 mi sopa secreta
-    curativa, y ya se sentir\xE1 bien otra vez Que vieja tonta que soy,  olvid\xE9
-    anotar algo en la lista , ser\xEDa mucha molestia que vayas a buscar algo mas
-    por m\xED? "
+  - "Do\xF1a Paulina: Le agarr\xF3 un resfr\xEDo, nada grave, le har\xE9 mi sopa secreta
+    curativa, y ya se sentir\xE1 bien otra vez "
+  - "Do\xF1a Paulina: Que vieja tonta que soy,  olvid\xE9 un ingrediente , ser\xEDa
+    mucha molestia que vayas a buscar algo m\xE1s por m\xED?"
   - 'Lucas: No hay problema, dime.'
-  - 'Donia Paulina: Necesito que me consigas unas hojas de una planta particular...'
-  - 'Donia Paulina: Ve junto a la iglesia, al sur del pueblo y busca una que tenga
-    unas flores rosadas'
+  - "Do\xF1a Paulina: Necesito que me consigas unas hojas de una planta particular,
+    ve junto a la iglesia, al sur del pueblo y busca una que tenga unas flores rosadas"

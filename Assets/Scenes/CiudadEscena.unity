@@ -1306,11 +1306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoDeSuavizado: 1
-  maxSpeed: 4
-  distanciaConElJugador: 1
+  maxSpeed: 50
+  distanciaConElJugador: 0.5
   target: {x: 0, y: 0, z: 0}
   mov: {x: 0, y: 0}
-  speed: 3
 --- !u!50 &385641292
 Rigidbody2D:
   serializedVersion: 4
@@ -4495,9 +4494,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreNpc: Garax
-  dialogoActual: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
-  dialogoSinMision: {fileID: 11400000, guid: 12947c92aba37ad4cbf76f002b41e359, type: 2}
-  dialogoSinCondicion: {fileID: 11400000, guid: 2419551490aaeba4bad125a424456524,
+  dialogoActual: {fileID: 11400000, guid: 343eee7d0a891814e9293edf44bfc3f0, type: 2}
+  dialogoSinMision: {fileID: 11400000, guid: 343eee7d0a891814e9293edf44bfc3f0, type: 2}
+  dialogoSinCondicion: {fileID: 11400000, guid: 5a7fdbe625243f04c96952c3f80bbfcf,
     type: 2}
   leyendoLinea: 0
   misionActual: {fileID: 0}
@@ -4600,7 +4599,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1631532281}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 49.11, y: -1, z: 0}
+  m_LocalPosition: {x: 49.11, y: -1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

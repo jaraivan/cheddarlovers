@@ -13,9 +13,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombreNPC: Garax
   lineasDeTexto:
-  - 'Lucas: Hola Garax, tanto tiempo!! Como estas?'
-  - 'Garax: Muy bien, si la verdad paso mucho tiempo, queria venir antes cuando me
-    entere del accidente en la mina, pero tenia mucho trabajo y no pude, lo siento
-    mucho.'
-  - 'Lucas: Esta bien, tengo otros problemas ahora, antes de que me olvide, esto te
-    lo manda Clara, ella esta enferma y no podia venir..'
+  - 'Garax: Que problemas tienes?'
+  - 'Lucas: Debo mucha plata, y amenazaron con matarme, estoy desesperado.'
+  - 'Garax: Uy amigo que terrible!! Yo puedo prestarte lo que necesites, eramos mejores
+    amigos, la distancia no cambio eso, por lo menos de mi parte.'
+  - 'Lucas: De verdad?? Muchas gracias Garax, me salvas la vida literalmente, pero
+    no se cuando te lo podre devolver.'
+  - 'Garax: No es para tanto, solo me tenes que firmar un contrato, pura formalidad
+    para mis abogados y ya esta.'
+  - 'Lucas: No hay problema, te lo agradezco infinitamente, cuando Clara mejore nos
+    juntamos a brindar por los viejos tiempos.'
+  - 'Garax: Por supuesto.'
+  - 'Lucas: Ahora me voy a pagar mi deuda y juntar para devolverte lo que me prestaste,
+    hasta luego!'

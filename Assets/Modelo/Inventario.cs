@@ -101,7 +101,9 @@ public class Inventario : MonoBehaviour
     }
 
     public bool TieneElItem(Item item){
-      
+        if(item == null){
+            return true;
+        }
         return this.items.Contains(item);
     }
 

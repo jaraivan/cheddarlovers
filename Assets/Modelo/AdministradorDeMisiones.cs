@@ -25,6 +25,38 @@ public class AdministradorDeMisiones : MonoBehaviour{
     public List<Mision> misiones2 = new List<Mision>();
 
     void Start(){
+        ReiniciarTodasLasMision();
+        ActivarMisionPrincipal();
+        HacerDisponibleMision1();
+    }
+
+    private void HacerDisponibleMision1()
+    {
+        foreach (Mision m in this.misiones2)
+        {
+            if(m.nombreDeMision == "Ayudando a Doña Paulina"){
+                m.estadoDeMision = EstadoDeMision.Disponible;
+            }
+        }
+    }
+
+    private void ActivarMisionPrincipal()
+    {
+        foreach (Mision m in this.misiones2)
+        {
+            if(m.nombreDeMision == "Deudas Heredadas"){
+                m.estadoDeMision = EstadoDeMision.Activa;
+            }
+        }
+    }
+
+    private void ReiniciarTodasLasMision()
+    {
+        foreach (Mision m in this.misiones2)
+        {
+            m.estadoDeMision = EstadoDeMision.Inactiva;
+        }
+    
     }
 
     public void AgregarMision(Mision mision){
@@ -34,7 +66,9 @@ public class AdministradorDeMisiones : MonoBehaviour{
     public Mision GetMisionParaMi(string nombreNPC){
         foreach (Mision m in this.misiones2)
         {
-            if((m.propietario == nombreNPC && m.estadoDeMision == EstadoDeMision.Activa) ||  (m.propietario == nombreNPC && m.estadoDeMision == EstadoDeMision.Disponible)){
+            if((m.propietario == nombreNPC && m.estadoDeMision == EstadoDeMision.Activa) ||  
+            (m.propietario == nombreNPC && m.estadoDeMision == EstadoDeMision.Disponible)
+            || m.destinatario == nombreNPC && m.estadoDeMision == EstadoDeMision.Activa){
                 return m;
             }
         }
@@ -47,6 +81,20 @@ public class AdministradorDeMisiones : MonoBehaviour{
         foreach(Mision m in this.misiones2){
             if(m!=null){
                 if(m.estadoDeMision == EstadoDeMision.Activa){
+                    misionesActivas.Add(m);
+                }
+            }
+        }
+
+        return misionesActivas;
+    }
+
+    public List<Mision> GetMisionesActivasYDisponibles(){
+        List<Mision> misionesActivas = new List<Mision>();
+
+        foreach(Mision m in this.misiones2){
+            if(m!=null){
+                if(m.estadoDeMision == EstadoDeMision.Activa || m.estadoDeMision == EstadoDeMision.Disponible ){
                     misionesActivas.Add(m);
                 }
             }
