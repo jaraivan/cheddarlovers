@@ -22,3 +22,4 @@ MonoBehaviour:
   precompensa: {fileID: 0}
   precompensaOro: 0
   proxMision: {fileID: 0}
+  descripcion: Ve junto a la iglesia y busca la flor rosa

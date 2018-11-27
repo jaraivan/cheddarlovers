@@ -54,7 +54,6 @@ public class PerroCtrl : MonoBehaviour {
 			distEnX,
 			distEnY
 		);
-		print(mov);
 		
 		anim.SetBool("caminando",true);
 		anim.SetFloat("movX",mov.x);

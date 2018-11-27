@@ -68,6 +68,16 @@ public class Inventario : MonoBehaviour
         slotVacio.AdquirirItem(item);
     }
 
+    public void ActualizarSlotSacandoElItem(Item item) {
+        List<SlotCtrl> hijos = new List<SlotCtrl>();
+	
+	    transform.Find("ItemsParent").gameObject.GetComponentsInChildren(true,hijos);
+
+        SlotCtrl slotConItem = BuscarSlotConItem(hijos,item);
+        slotConItem.itemPrefab = null;
+        slotConItem.ActualizarImagen(null);
+    }
+
     private SlotCtrl BuscarSlotVacio(List<SlotCtrl> hijos)
     {
         foreach(SlotCtrl s in hijos){
@@ -79,6 +89,17 @@ public class Inventario : MonoBehaviour
 
     }
 
+    private SlotCtrl BuscarSlotConItem(List<SlotCtrl> hijos,Item item)
+    {
+        foreach(SlotCtrl s in hijos){
+           if(s.itemPrefab == item){
+               return s;
+           }
+        }
+        throw new NoTienesEseItemEnNingunSlotException();
+
+    }
+
     public bool TieneElItem(Item item){
       
         return this.items.Contains(item);
@@ -87,6 +108,11 @@ public class Inventario : MonoBehaviour
     public void QuitarItem(Item item) {
         this.items.Remove(item);
         
+    }
+
+    public void QuitarElItemPorMision(Item item){
+        this.items.Remove(item);
+        ActualizarSlotSacandoElItem(item);
     }
 
     public List<Item> GetItemsEnBaul(){
