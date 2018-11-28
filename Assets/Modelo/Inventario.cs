@@ -133,6 +133,10 @@ public class Inventario : MonoBehaviour
             slot.itemPrefab = null;
             slot.ActualizarImagen(null);
         }
+        if(slot.itemPrefab != null && slot.itemPrefab.nombreDeItem == "Bote"){
+            GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().UsarBote();
+            
+        }
     }
 
 }

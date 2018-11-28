@@ -78,7 +78,10 @@ public class AcertijoCtrl : MonoBehaviour {
 
     private void ComportamientoAcertijoFinalizado()
     {
+		if(!Inventario.instance.TieneElItem(bote)){
+
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(bote);
+		}
 		BotonSALIR();
 		return;
     }

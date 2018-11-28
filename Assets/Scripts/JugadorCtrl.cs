@@ -17,7 +17,14 @@ public class JugadorCtrl : MonoBehaviour {
 	public bool quiereHablar = false;
 	private EstadoDelJugador estadoDelJugador = EstadoDelJugador.Jugando;
 
-	public static JugadorCtrl jugador;
+	public GameObject muelleActual;
+
+    public void SetMuelleActual(GameObject gameObject)
+    {
+        muelleActual = gameObject;
+    }
+
+    public static JugadorCtrl jugador;
 
 
     private Inventario inventario;
@@ -167,5 +174,11 @@ public class JugadorCtrl : MonoBehaviour {
 		this.salud += vidaASumar;
 		GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<VidaCtrl>().ActualizarVida();
 	}
-	
+
+    public void UsarBote()
+    {
+        if(muelleActual != null){
+			muelleActual.GetComponent<MuelleCtrl>().CruzarEnBote();
+		}
+    }
 }
