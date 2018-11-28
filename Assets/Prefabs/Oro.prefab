@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4763542523516274}
   - component: {fileID: 212460017560322084}
   - component: {fileID: 61467249717370692}
+  - component: {fileID: 114616971479620748}
   m_Layer: 0
   m_Name: Oro
   m_TagString: Untagged
@@ -66,6 +67,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9888077, y: 0.92648315}
   m_EdgeRadius: 0
+--- !u!114 &114616971479620748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1418575055064596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868064c045fcaa847afe2b09246478fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valor: 3000
 --- !u!212 &212460017560322084
 SpriteRenderer:
   m_ObjectHideFlags: 1
