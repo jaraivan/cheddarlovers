@@ -23,6 +23,8 @@ TagManager:
   - MuelleIzq
   - Bobby
   - mapa
+  - canvasGatos
+  - cofreGatos
   layers:
   - Default
   - TransparentFX
