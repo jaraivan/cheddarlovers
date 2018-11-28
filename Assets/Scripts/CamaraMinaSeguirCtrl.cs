@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.UI;
 
-public class CamaraSeguirCtrl : MonoBehaviour {
+public class CamaraMinaSeguirCtrl : MonoBehaviour {
 
 	public float tiempoDeSuavizado = 0.5f;
 	
@@ -19,7 +19,7 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 		 Assert.IsNotNull(jugador);
 		
 		//this.SetLimites(jugador.gameObject.GetComponent<JugadorCtrl>().GetMapa());
-		this.SetLimites(GameObject.FindGameObjectWithTag("mapa"));
+		//this.SetLimites(GameObject.FindGameObjectWithTag("mapa"));
 		GameObject.FindGameObjectWithTag("UI").GetComponent<Canvas>().worldCamera = GetComponent<Camera>();
 		 
 		
@@ -62,8 +62,8 @@ public class CamaraSeguirCtrl : MonoBehaviour {
 
 		//Vector3 posicionJugador = jugador.GetComponent<Transform>().position;
 		transform.position = new Vector3(
-			Mathf.Clamp(posX,tLX,bRX),
-			Mathf.Clamp(posY,bRY,tLY),
+			posX,
+			posY,
 			transform.position.z);
 	}
 

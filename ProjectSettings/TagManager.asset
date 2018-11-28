@@ -22,6 +22,7 @@ TagManager:
   - ParentBaulUI
   - MuelleIzq
   - Bobby
+  - mapa
   layers:
   - Default
   - TransparentFX
