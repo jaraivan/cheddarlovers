@@ -79,6 +79,7 @@ public class AcertijoGatos : MonoBehaviour {
     private void ComportamientoAcertijoFinalizado()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(llave);
+		GameObject.FindGameObjectWithTag("cofreGatos").GetComponent<CofreGatos>().CambiarSpriteAbierto();
 		BotonSALIR();
 		return;
     }
