@@ -11,17 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d324d88847c6cb43813705bfba81d65, type: 3}
   m_Name: Mision7
   m_EditorClassIdentifier: 
-  nombreDeMision: Mision7
+  nombreDeMision: Explorando la mina
   propietario: Luis
   destinatario: Luis
   dialogoInicio: {fileID: 11400000, guid: 1e9ef1537f99bf84aba519eadd380325, type: 2}
   dialogoFin: {fileID: 11400000, guid: 42790bf9749a2554d81c353138c7c0c4, type: 2}
-  recompensa: {fileID: 0}
-  condicion: {fileID: 0}
+  recompensa: {fileID: 11400000, guid: de60f077a88e3604fac1bc43163c5652, type: 2}
+  condicion: {fileID: 11400000, guid: de60f077a88e3604fac1bc43163c5652, type: 2}
   condicionOro: 0
   recompensaOro: 0
   estadoDeMision: 3
   precompensa: {fileID: 0}
-  precompensaOro: 0
+  precompensaOro: 1000
   proxMision: {fileID: 0}
   descripcion: 

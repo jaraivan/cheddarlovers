@@ -11,5 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
   m_Name: DIM7
   m_EditorClassIdentifier: 
-  nombreNPC: 
-  lineasDeTexto: []
+  nombreNPC: Luis
+  lineasDeTexto:
+  - 'Luis: Que suerte que has venido.'
+  - 'Lucas: Tu quien eres?'
+  - "Luis: Luis, soy geologo y estoy aqui para investigar que sucedi\xF3"
+  - "Lucas: Como investigar? Hubo un accidente aqui, una explosi\xF3n, aunque ultimamente
+    vengo escuchando que no fue asi"
+  - "Luis: Una explosi\xF3n? Imposible! Estuve ahi dentro, y la mina esta intacta"
+  - 'Lucas: Que paso con la gente que estaba ahi dentro?'
+  - 'Luis: Sospecho que son las actuales criaturas que merodean ahi dentro'
+  - 'Lucas: Mi padre podria estar vivo?'
+  - "Luis: Es una posibilidad... escuchame, hay una puerta que est\xE1 cerrada, seguro
+    all\xED encontraremos algo importante"
+  - 'Luis: Tengo muchos informes que hacer, ayudame por favor con esto'
+  - 'Lucas: Ok, yo tambien quiero saber que paso'

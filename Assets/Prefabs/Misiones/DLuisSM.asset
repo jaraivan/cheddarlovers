@@ -9,12 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c77177714433647989941cc046f239, type: 3}
-  m_Name: DFM7
+  m_Name: DLuisSM
   m_EditorClassIdentifier: 
   nombreNPC: Luis
   lineasDeTexto:
-  - 'Luis: Que has encontrado?'
-  - 'Lucas: Esta llave, tuve que salir corriendo, los zombies me perseguian'
-  - "Luis: Ya veo, pero hay que explorar la mina a fondo, tenemos que saber que sucedi\xF3
-    realmente, y quizas encontrar la cura"
-  - 'Lucas: Yo te voy a ayudar, uno de ellos podria ser mi padre'
+  - "Luis: Me interesa saber que paso aqu\xED,pero aun no tengo tareas para ti."

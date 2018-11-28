@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Assertions;
 
 public enum EstadoDelJugador{Conversando,Jugando};
@@ -168,6 +169,17 @@ public class JugadorCtrl : MonoBehaviour {
 	public void RestarVida(int vidaARestar){
 		this.salud -= vidaARestar;
 		GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<VidaCtrl>().ActualizarVida();
+		if(this.salud< 0){
+			if(SceneManager.GetActiveScene().name == "Mina"){
+				transform.position = new Vector3(97.5f,-62f,transform.position.z);
+				this.salud = 100;
+				GameObject.FindGameObjectWithTag("BarraDeVida").GetComponent<VidaCtrl>().ActualizarVida();
+				this.hambre = 100;
+				GameObject.FindGameObjectWithTag("BarraDeEnergia").GetComponent<EnergiaCtrl>().ActualizarEnergia();
+				
+			}
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
 	}
 
 	public void SumarVida(int vidaASumar){

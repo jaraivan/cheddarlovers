@@ -3702,9 +3702,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreNpc: Pescador
-  dialogoActual: {fileID: 11400000, guid: 6825f6cfe253c1f48b55dedf0b9662d4, type: 2}
-  dialogoSinMision: {fileID: 11400000, guid: 6825f6cfe253c1f48b55dedf0b9662d4, type: 2}
-  dialogoSinCondicion: {fileID: 11400000, guid: 515524fd3c6b8fd46a85bd103fbe52ac,
+  dialogoActual: {fileID: 11400000, guid: a9bf23575bf81984d8841d1f968e53e6, type: 2}
+  dialogoSinMision: {fileID: 11400000, guid: a9bf23575bf81984d8841d1f968e53e6, type: 2}
+  dialogoSinCondicion: {fileID: 11400000, guid: 5b4f68f6e97b830438b47169adadc0ab,
     type: 2}
   leyendoLinea: 0
   misionActual: {fileID: 0}
@@ -3961,9 +3961,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreNpc: ElLocoPablo
-  dialogoActual: {fileID: 11400000, guid: 6825f6cfe253c1f48b55dedf0b9662d4, type: 2}
-  dialogoSinMision: {fileID: 11400000, guid: 6825f6cfe253c1f48b55dedf0b9662d4, type: 2}
-  dialogoSinCondicion: {fileID: 11400000, guid: 9801d24980a03f74ea12dcf3a9567a2e,
+  dialogoActual: {fileID: 11400000, guid: d306e35388dc97b4d99d02d32a503a7b, type: 2}
+  dialogoSinMision: {fileID: 11400000, guid: d306e35388dc97b4d99d02d32a503a7b, type: 2}
+  dialogoSinCondicion: {fileID: 11400000, guid: 93faa6df6af2a3d41a75c8f5678f86fa,
     type: 2}
   leyendoLinea: 0
   misionActual: {fileID: 0}
@@ -5458,9 +5458,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nombreNpc: Luis
-  dialogoActual: {fileID: 11400000, guid: 6825f6cfe253c1f48b55dedf0b9662d4, type: 2}
-  dialogoSinMision: {fileID: 11400000, guid: 6825f6cfe253c1f48b55dedf0b9662d4, type: 2}
-  dialogoSinCondicion: {fileID: 11400000, guid: 9801d24980a03f74ea12dcf3a9567a2e,
+  dialogoActual: {fileID: 11400000, guid: bf379354dbb4a7b4fb89070627358de6, type: 2}
+  dialogoSinMision: {fileID: 11400000, guid: bf379354dbb4a7b4fb89070627358de6, type: 2}
+  dialogoSinCondicion: {fileID: 11400000, guid: 11d625e52274ffe4eb02587493a1d5c3,
     type: 2}
   leyendoLinea: 0
   misionActual: {fileID: 0}
