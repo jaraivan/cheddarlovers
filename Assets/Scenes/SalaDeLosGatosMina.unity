@@ -2177,7 +2177,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 03fb790e14b842140b00799cdeb57e62, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.72
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3266,7 +3266,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300006, guid: 0974bed3219a8324585675c6988821a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
