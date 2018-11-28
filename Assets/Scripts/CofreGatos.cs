@@ -25,7 +25,7 @@ public class CofreGatos : MonoBehaviour {
 
 	private void IniciarAcertijo()
     {
-        GameObject.FindGameObjectWithTag("canvasGatos").transform.Find("AcertijoGatos").gameObject.SetActive(true);
+        GameObject.FindGameObjectWithTag("canvasGatos").transform.Find("AcertijoDeLosGatos").gameObject.SetActive(true);
     }
 
     void OnTriggerExit2D(Collider2D col){
