@@ -20,8 +20,8 @@ MonoBehaviour:
   condicion: {fileID: 11400000, guid: de60f077a88e3604fac1bc43163c5652, type: 2}
   condicionOro: 0
   recompensaOro: 0
-  estadoDeMision: 3
+  estadoDeMision: 2
   precompensa: {fileID: 0}
   precompensaOro: 1000
   proxMision: {fileID: 0}
-  descripcion: 
+  descripcion: Recorre la mina

@@ -26,7 +26,14 @@ public class CamaraMinaSeguirCtrl : MonoBehaviour {
 		
 	}
 	void Start () {
+		//this.SetLimites(GameObject.FindGameObjectWithTag("mapa"));
+		GameObject.FindGameObjectWithTag("UI").GetComponent<Canvas>().worldCamera = GetComponent<Camera>();
 		Assert.IsNotNull(jugador);
+
+		tLX = 86f;
+		bRX = 93.84f;
+		tLY = -44.17f;
+		bRY = -59.23f;
 		 transform.position = new Vector3(jugador.GetComponent<Transform>().position.x,
 			jugador.GetComponent<Transform>().position.y,
 			transform.position.z); 
@@ -62,8 +69,8 @@ public class CamaraMinaSeguirCtrl : MonoBehaviour {
 
 		//Vector3 posicionJugador = jugador.GetComponent<Transform>().position;
 		transform.position = new Vector3(
-			posX,
-			posY,
+			Mathf.Clamp(posX,tLX,bRX),
+			Mathf.Clamp(posY,bRY,tLY),
 			transform.position.z);
 	}
 
