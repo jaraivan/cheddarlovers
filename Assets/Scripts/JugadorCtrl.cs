@@ -33,8 +33,8 @@ public class JugadorCtrl : MonoBehaviour {
 
 	public int oro = 0;
 
-	public int salud = 50;
-	public int hambre = 75;
+	public int salud;
+	public int hambre;
 
 	public Item pollo;
 
@@ -60,8 +60,6 @@ public class JugadorCtrl : MonoBehaviour {
     void Start () {
 		anim = GetComponent<Animator>();
 		rb2d = GetComponent<Rigidbody2D>();
-		salud = 50;
-		hambre = 75;
 		
 		estadoDelJugador = EstadoDelJugador.Jugando;
 		
