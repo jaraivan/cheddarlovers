@@ -20,8 +20,8 @@ MonoBehaviour:
   condicion: {fileID: 0}
   condicionOro: 700000
   recompensaOro: 0
-  estadoDeMision: 3
+  estadoDeMision: 0
   precompensa: {fileID: 0}
   precompensaOro: 50000
-  proxMision: {fileID: 11400000, guid: 6e86c669d05c4cd498fa1dd41fa8dbe5, type: 2}
+  proxMision: {fileID: 0}
   descripcion: Junta el dinero para devolverle a Garax

@@ -18,10 +18,10 @@ MonoBehaviour:
   dialogoFin: {fileID: 11400000, guid: bde3b257525a8a34986a03b6a0a1d80d, type: 2}
   recompensa: {fileID: 0}
   condicion: {fileID: 0}
-  condicionOro: 0
+  condicionOro: 50000
   recompensaOro: 0
-  estadoDeMision: 0
+  estadoDeMision: 2
   precompensa: {fileID: 0}
   precompensaOro: 0
-  proxMision: {fileID: 0}
+  proxMision: {fileID: 11400000, guid: 6e86c669d05c4cd498fa1dd41fa8dbe5, type: 2}
   descripcion: Juntar 50.00 de oro

@@ -101,6 +101,11 @@ public class JugadorCtrl : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Alpha6)){
 			Inventario.instance.UsarItemEnLaPosicion(6);
 		}
+		if(Input.GetKey(KeyCode.C)){
+			this.speed = 8f;
+		}else{
+			this.speed = 3f;
+		}
 	}
 
 	public void IniciarConversacion(){

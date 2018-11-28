@@ -136,11 +136,21 @@ public class AdministradorDeMisiones : MonoBehaviour{
         int oroAAgregar = mision.recompensaOro;
         GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AgregarOro(oroAAgregar);
         Item recompensaItem = mision.recompensa;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(recompensaItem);
+
+
+        if(recompensaItem != null){
+            GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().AdquirirItem(recompensaItem);
+        }
+        
          if(mision.condicion != null) {
             Inventario.instance.QuitarElItemPorMision(mision.condicion);
          }
+         if(mision.condicionOro >0) {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<JugadorCtrl>().RestarOro(mision.condicionOro);
+         }
+        if(mision.proxMision != null){
         BuscarYHacerDisponibleMisionEnLaLista(mision.proxMision);
+        }
     }
 
     public void Completar2(Mision mision){
