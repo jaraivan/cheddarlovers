@@ -22,6 +22,8 @@ TagManager:
   - ParentBaulUI
   - MuelleIzq
   - Bobby
+  - canvasGatos
+  - cofreGatos
   layers:
   - Default
   - TransparentFX
