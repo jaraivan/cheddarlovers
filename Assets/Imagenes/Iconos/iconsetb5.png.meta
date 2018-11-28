@@ -3,6 +3,7 @@ guid: 6c4a4906fd94a514fbf735ffc3f89eab
 TextureImporter:
   fileIDToRecycleName:
     21300000: iconsetb5_0
+    21300002: iconsetb5_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -93,13 +94,33 @@ TextureImporter:
         width: 24
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: e7e692f3b2f3d6c47a36da6dcccc4c48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: iconsetb5_1
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 337
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e646babdcfe9474f94a50856ee16792
       vertices: []
       indices: 
       edges: []
