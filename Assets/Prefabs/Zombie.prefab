@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95425025890203906}
   - component: {fileID: 114539505064498328}
   - component: {fileID: 50272776018942958}
+  - component: {fileID: 58094413637090930}
   m_Layer: 8
   m_Name: Zombie
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1178071477265854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87.2, y: -59.4, z: -0.5758186}
+  m_LocalPosition: {x: 93.17, y: -51.42, z: -0.5758186}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,6 +65,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!58 &58094413637090930
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1178071477265854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.48893547}
+  serializedVersion: 2
+  m_Radius: 0.54784584
 --- !u!61 &61572292895299182
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -76,7 +92,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010145187, y: 0.7373321}
+  m_Offset: {x: -0.010145187, y: 0.18359947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -87,7 +103,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5293274, y: 1.352922}
+  m_Size: {x: 0.5293274, y: 0.2454567}
   m_EdgeRadius: 0
 --- !u!95 &95425025890203906
 Animator:
@@ -120,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visionRadius: 3
   attackRadius: 1
-  speed: 3
+  speed: 2.5
 --- !u!212 &212586511154697462
 SpriteRenderer:
   m_ObjectHideFlags: 1

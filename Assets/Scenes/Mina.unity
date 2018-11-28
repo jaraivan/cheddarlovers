@@ -214,10 +214,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1178071477265854, guid: 6d4b7f006d7cdb84b94a4bb316ecf124, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d4b7f006d7cdb84b94a4bb316ecf124, type: 2}
   m_IsPrefabAsset: 0
@@ -828,10 +824,6 @@ Prefab:
     - target: {fileID: 1178071477265854, guid: 6d4b7f006d7cdb84b94a4bb316ecf124, type: 2}
       propertyPath: m_Name
       value: Zombie (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1178071477265854, guid: 6d4b7f006d7cdb84b94a4bb316ecf124, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d4b7f006d7cdb84b94a4bb316ecf124, type: 2}
