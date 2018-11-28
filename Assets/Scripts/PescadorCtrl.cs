@@ -49,6 +49,7 @@ public class PescadorCtrl : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col){
         this.DesactivarConversacion(null);
+        GameObject.FindGameObjectWithTag("UI").transform.Find("Acertijo").gameObject.SetActive(false);
     }
     void ActivarConversacionNPC()
     {
